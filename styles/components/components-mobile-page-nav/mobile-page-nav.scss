@@ -2,7 +2,7 @@
 // (contained in .Header)
 
 .MobilePageNav {
-  @extend %franklin-gothic-medium;
+  // @extend %franklin-gothic-medium;
   @include font-size(16px, 42px);
   position: relative;
   text-align: center;

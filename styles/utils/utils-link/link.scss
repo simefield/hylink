@@ -12,6 +12,15 @@
 }
 
 /**
+ * External site SVGs are white by default
+ * — must include class to make them see-able in body text
+ */
+
+.u-colorLink path {
+    fill: $link;
+}
+
+/**
  * Link complex
  *
  * A common pattern is to have a link with several pieces of text and/or an

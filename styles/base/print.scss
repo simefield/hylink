@@ -58,11 +58,11 @@
     text-decoration: underline;
   }
 
-  pre,
-  blockquote {
-    border: 1px solid $black-50;
-    page-break-inside: avoid;
-  }
+  // pre,
+  // blockquote {
+  //   border: 1px solid $black-50;
+  //   page-break-inside: avoid;
+  // }
 
   thead {
     display: table-header-group; /* h5bp.com/t */

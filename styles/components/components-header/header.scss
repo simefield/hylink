@@ -48,7 +48,7 @@
     position: relative;
 
     &::before {
-      background-color: $black-20;
+      background-color: $black;
       content: "";
       height: $v*2;
       left: -$h/2;

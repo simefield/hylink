@@ -5,7 +5,7 @@ $button-border-color: currentcolor; // uses color value
 $button-border-radius: 40px;
 $button-color: inherit;
 $button-color: $white;
-$button-background-color: $msd-blue;
+$button-background-color: $green;
 $button-disabled-opacity: .6;
 $button-font: inherit;
 // $button-padding: .4em .75em;
@@ -145,5 +145,5 @@ $button-font: inherit;
 // }
 
 .Button--secondary {
-  background-color: $msd-dark-blue;
+  background-color: $black;
 }

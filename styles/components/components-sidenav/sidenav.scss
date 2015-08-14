@@ -2,7 +2,7 @@
  * Sidenav
  */
 
-$sidenav-border-color: $black-10;
+$sidenav-border-color: $black;
 
 // ul
 .Sidenav {
@@ -21,7 +21,7 @@ $sidenav-border-color: $black-10;
 
 .Sidenav-title {
   @extend strong;
-  border-bottom: $decorative-border-width solid $msd-green;
+  border-bottom: $decorative-border-width solid $black;
 }
 
 // a
@@ -34,7 +34,7 @@ $sidenav-border-color: $black-10;
   }
 
   &.active {
-    background-color: $msd-pale-blue;
+    background-color: $black;
   }
 }
 
@@ -44,7 +44,7 @@ $sidenav-border-color: $black-10;
 
 // ul
 .Sidenav--sansTitle {
-  border-top: $decorative-border-width solid $msd-green;
+  border-top: $decorative-border-width solid $black;
 }
 
 // Magic sidenav (appears above footer on tablet and down)
@@ -53,7 +53,7 @@ $sidenav-border-color: $black-10;
 
 // ul
 .Sidenav--magic {
-  border-bottom: 1px solid $black-10;
+  border-bottom: 1px solid $black;
   // bleed and counter page bottom padding
   margin: $v*1.5 (-$h) (-$v*2 - 1); // -1 margin bottom to avoid double-margin with .ButtonList below it
   text-align: left;
@@ -65,7 +65,7 @@ $sidenav-border-color: $black-10;
 }
 // li
 .Sidenav--magic-item {
-  border-top: 1px solid $black-10;
+  border-top: 1px solid $black;
 }
 
 // a
@@ -79,7 +79,7 @@ $sidenav-border-color: $black-10;
 
   &:focus,
   &:hover {
-    background-color: $black-2;
+    background-color: $black;
   }
 
   &.Sidenav--magic-link { // specificity hack

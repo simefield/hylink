@@ -11,7 +11,7 @@
 // Usage:
 // Note, .Media_body element can't be a <span>
 // <div class="Media">
-//   <img class="Media-object" src="assets/images/checklist-tick.png">
+//   <img class="Media-object" src="images/checklist-tick.png">
 //   <p class="Media-body">
 //     A medical certificate and a completed Self-Assessment questionaire if you have a health condition, injury or disability that stops you working full-time
 //   </p>
@@ -33,9 +33,9 @@
  * For images and video, set to block
  */
 
-.Media-object img,
-.Media-object video,
-.Media-object iframe {
+// .Media-object video,
+// .Media-object iframe,
+.Media-object img {
   display: block;
 }
 
@@ -48,14 +48,14 @@
   // margin-right: $media-object-gutter;
 }
 
-.Media--alignRight .Media-object {
-  float: right;
-  // margin-left: $media-object-gutter;
-}
+// .Media--alignRight .Media-object {
+//   float: right;
+//   // margin-left: $media-object-gutter;
+// }
 
-.Media--centered {
-  display: inline-block;   
+// .Media--centered {
+//   display: inline-block;   
 
-  // > div { text-align: left; }
-  > * { text-align: left; }
-}
+//   // > div { text-align: left; }
+//   > * { text-align: left; }
+// }

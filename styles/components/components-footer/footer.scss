@@ -1,7 +1,6 @@
 // Global footer
 
 // .Footer {
-  // background-color: $msd-dark-blue;
   // margin-top: $v*2; // ineffective with sticky footer
 // }
 
@@ -45,7 +44,7 @@
 }
 
 .Footer-legal {
-  background-color: $msd-navy;
+  background-color: $black;
 
   @media #{$mobile-only} {
     text-align: center;

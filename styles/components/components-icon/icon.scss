@@ -9,7 +9,7 @@ $icon-scale-lg-md: ($icon-size-md / $icon-size-lg) * 1; // remove unit
 $icon-scale-md-sm: ($icon-size-sm / $icon-size-md) * 1; // remove unit
 
 .Icon {
-  background-color: $msd-purple; // default
+  background-color: $black;
   border-radius: 100%;
   color: $white;
   display: inline-block;
@@ -69,7 +69,7 @@ $icon-scale-md-sm: ($icon-size-sm / $icon-size-md) * 1; // remove unit
 .Icon--card,
 .Icon--job-seeker,
 .Icon--job-seeker-student {
-  background-color: $msd-green;
+  background-color: $black;
 }
 
 .Icon--teal,
@@ -81,7 +81,7 @@ $icon-scale-md-sm: ($icon-size-sm / $icon-size-md) * 1; // remove unit
 .Icon--widows-benefit,
 .Icon--orphans-benefit,
 .Icon--supplementary-assistance {
-  background-color: $msd-teal;
+  background-color: $black;
 }
 
 .Icon--salmon,
@@ -90,23 +90,16 @@ $icon-scale-md-sm: ($icon-size-sm / $icon-size-md) * 1; // remove unit
 .Icon--sole-parent-overseas,
 .Icon--system-error,
 .Icon--unsupported-child {
-  background-color: $msd-salmon;
+  background-color: $black;
 }
 
 .Icon--blue,
 .Icon--young-parent {
-  background-color: $msd-blue;
+  background-color: $black;
 }
 
 .Icon--purple,
 .Icon--veteran-pension,
 .Icon--super {
-  background-color: $msd-purple;
+  background-color: $black;
 }
-
-// $msd-salmon -- parenting, error icons
-// $msd-green --- job seeker, employment
-// $msd-cyan ---- supported living, health
-// $msd-teal ---- disability
-// $msd-purple -- housing, pensions
-// $msd-blue ---- extra allowance

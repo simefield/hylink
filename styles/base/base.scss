@@ -16,79 +16,64 @@
 }
 
 html {
-  @extend %franklin-gothic-book;
-  // background: $base-background;
+  @extend %sans-serif;
   background-color: $white;
   box-sizing: border-box; // 1
   color: $base-colour;
   line-height: $base-line-height;
 }
 
-b {
-  @extend %franklin-gothic-demi;
-}
-
+b,
 strong {
-  @extend %franklin-gothic-medium;
+  font-weight: 900;
 }
 
 i,
 em {
-  @extend %franklin-gothic-book-italic;
+  font-style: italic;
 }
 
-// h1 {
-//   @extend %franklin-gothic-book;
-// }
-
+h1,
 h2,
-h3,
-h4 {
-  @extend %franklin-gothic-medium;
-}
-
-h5,
-h6 {
-  @extend %franklin-gothic-demi;
+h3 {
+  @extend %museo-slab-500;
+  color: $green;
 }
 
 a:focus,
 a:visited,
 a:hover,
 a:active {
-  // color: $base-link-color-hover;
-  // color: inherit;
   color: $link;
   text-decoration: none;
 }
 
 a {
-  // color: $base-link-color;
   color: $link;
   cursor: pointer;
   text-decoration: none;
 }
 
-blockquote,
+// blockquote,
+// figure,
 dl,
-dd,
-figure {
+dd {
   margin: 0;
 }
 
-pre {
-  margin-top: 0;
-}
+// pre {
+//   margin-top: 0;
+// }
 
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
-ol,
+// h4,
+// h5,
+// h6,
+// ol,
 p,
-pre,
+// pre,
 ul {
   margin-bottom: 0;
   // fall back to browser default top margins for type elements
@@ -119,11 +104,11 @@ fieldset {
   padding: 0;
 }
 
-iframe {
-  border: 0;
-}
+// iframe {
+//   border: 0;
+// }
 
-ol,
+// ol,
 ul {
   list-style: none;
   // margin: 0;
@@ -136,11 +121,11 @@ ul {
  * might still respond to pointer events.
  */
 
-[tabindex="-1"]:focus {
-  // scss-lint:disable ImportantRule
-  outline: none !important;
-  // scss-lint:enable ImportantRule
-}
+// [tabindex="-1"]:focus {
+//   // scss-lint:disable ImportantRule
+//   outline: none !important;
+//   // scss-lint:enable ImportantRule
+// }
 
 hr {
   border-style: solid;

@@ -5,51 +5,19 @@
  * for  css gradients to render correctly)
  */
 
-// Greys
-$white:    #fff;
-$black:    #000;
-$black-90: #1f1f1f; // (88%)
-$black-80: #333;
-$black-70: #4d4d4d;
-$black-60: #666;
-$black-50: #808080;
-$black-40: #999;
-$black-30: #b3b3b3;
-$black-20: #ccc;
-$black-10: #ddd; // (12%)
-$black-5:  #f2f2f2;
-$black-2:  #fafafa;
-$black-0:  $white;
+$black: #000000;
+$white: #ffffff;
 
-// Brand
-$msd-dark-blue: #134276;
-$msd-navy: #162c45;
-$msd-light-grey: $black-5;
+$green: #c3cf20;
+$blue: #376db6;
 
-$msd-red: #f75c58;
-$msd-salmon: $msd-red; // parenting, error icons
-$msd-green: #06b271; // job seeker, employment
-$msd-cyan: #32c3d9; // supported living, health
-$msd-teal: #35c0ba; // disability
-// $msd-teal: #00bba1;
-$msd-purple: #3a54a1; // housing, pensions
-// $msd-blue: #017ac9; // extra allowance
-// darken blue a dash to scrape through on accessibility contrast requirements (was failing when in a .Greybox -- $greybox)
-$msd-blue: #017ac9; // extra allowance
 
-$msd-pale-blue: rgba($msd-blue, .05);
-
-$msd-dark-blue: #125da3;
-$realme-blue: $msd-dark-blue;
-// $greybox:  #f7f7f7;
 $greybox:  #f8f8f8;
 
-$error: $msd-red;
-$negative: #d84935;
-$positive: $msd-green;
-
 // Links
-$link: $msd-blue;
+$link: $green;
+
+$error: red;
 
 /**
  * Font variables
@@ -57,7 +25,7 @@ $link: $msd-blue;
  */
 
 // $base-background: inherit;
-$base-colour: $black;
+$base-colour: $white;
 $base-font-size: 16px !default;
 // $base-font: $base-font-size "HelveticaNeue-Thin", sans-serif;
 $base-link-color: $link;

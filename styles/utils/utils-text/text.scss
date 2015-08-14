@@ -93,9 +93,9 @@
  * Text sizes
  */
 
-.u-textSize--xs {
-  @include font-size(12px);
-}
+// .u-textSize--xs {
+//   @include font-size(12px);
+// }
 
 .u-textSize--sm {
   @include font-size(14px);
@@ -109,13 +109,13 @@
   @include font-size(18px);
 }
 
-.u-textSize--xl {
-  @include font-size(20px);
-}
+// .u-textSize--xl {
+//   @include font-size(20px);
+// }
 
-.u-textSize--xx {
-  @include font-size(22px);
-}
+// .u-textSize--xx {
+//   @include font-size(22px);
+// }
 
 /**
  * Text colour
@@ -125,34 +125,34 @@
   color: $white;
 }
 
-.u-textColour--base {
-  color: $base-colour;
+// .u-textColour--base {
+//   color: $base-colour;
 
-  path {
-    fill: $base-colour;
-  }
-}
+//   path {
+//     fill: $base-colour;
+//   }
+// }
 
-.u-textColour--link {
-  color: $link;
-}
+// .u-textColour--link {
+//   color: $link;
+// }
 
-.u-textColour--red {
-  color: $error;
-}
+// .u-textColour--red {
+//   color: $error;
+// }
 
 /**
  * Text weight
  */
 
-.u-textBook {
-  @extend %franklin-gothic-book;
-}
+// .u-textBook {
+//   @extend %franklin-gothic-book;
+// }
 
-.u-textMedium {
-  @extend %franklin-gothic-medium;
-}
+// .u-textMedium {
+//   @extend %franklin-gothic-medium;
+// }
 
-.u-textDemi {
-  @extend %franklin-gothic-demi;
-}
+// .u-textDemi {
+//   @extend %franklin-gothic-demi;
+// }

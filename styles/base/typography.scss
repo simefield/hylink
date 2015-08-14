@@ -1,142 +1,46 @@
 /**
- * @license
- * MyFonts Webfont Build ID 3031372, 2015-05-25T20:41:30-0400
- * 
- * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
- * explicitly restricted from using the Licensed Webfonts(s).
- * 
- * You may obtain a valid license at the URLs below.
- * 
- * Webfont: FranklinGothicURW-Boo by URW++
- * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-book/
- * 
- * Webfont: FranklinGothicURW-Med by URW++
- * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-medium/
- * 
- * Webfont: FranklinGothicURW-BooIta by URW++
- * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-book-italic/
- * 
- * Webfont: FranklinGothicURW-Dem by URW++
- * URL: http://www.myfonts.com/fonts/urw/franklin-gothic/t-demi/
- * 
- * 
- * License: http://www.myfonts.com/viewlicense?type=web&buildid=3031372
- * Licensed pageviews: 1,000,000
- * Webfonts copyright: (URW)++,Copyright 2006 by (URW)++ Design &amp; Development
- * 
- * © 2015 MyFonts Inc
+ * Typography
 */
-
-/* @import must be at top of file, otherwise CSS will not work */
-@import url("//hello.myfonts.net/count/2e414c");
   
 @font-face {
-  font-family: "franklin-gothic-book";
-  // src: url('fonts/franklin-gothic-book.eot'); /* IE9 */
-  src: url("fonts/franklin-gothic-book.woff2") format("woff2"),
-    url("fonts/franklin-gothic-book.woff") format("woff");
-}
-
-@font-face {
-  font-family: "franklin-gothic-book-italic";
-  // src: url('fonts/franklin-gothic-book-italic.eot'); /* IE9 */
-  src: url("fonts/franklin-gothic-book-italic.woff2") format("woff2"),
-    url("fonts/franklin-gothic-book-italic.woff") format("woff");
-}
-
-@font-face {
-  font-family: "franklin-gothic-medium";
-  // src: url('fonts/franklin-gothic-medium.eot'); /* IE9 */
-  src: url("fonts/franklin-gothic-medium.woff2") format("woff2"),
-    url("fonts/franklin-gothic-medium.woff") format("woff");
-}
-
-@font-face {
-  font-family: "franklin-gothic-demi";
-  // src: url('fonts/franklin-gothic-demi.eot'); /* IE9 */
-  src: url("fonts/franklin-gothic-demi.woff2") format("woff2"),
-    url("fonts/franklin-gothic-demi.woff") format("woff");
+  font-family: "museo-slab-500";
+  src: url("fonts/museo_slab_500-webfont.woff2") format("woff2"),
+    url("fonts/museo_slab_500-webfont.woff") format("woff");
 }
 
 // Font stack variable
-$franklin-gothic-book: "franklin-gothic-book", sans-serif;
-$franklin-gothic-book-italic: "franklin-gothic-book-italic", sans-serif;
-$franklin-gothic-medium: "franklin-gothic-medium", sans-serif;
-$franklin-gothic-demi: "franklin-gothic-demi", sans-serif;
+$museo-slab-500: "museo-slab-500", sans-serif;
+$sans-serif: "HelveticaNeue-Light", "HelveticaNeue-Roman", "HelveticaNeue-Medium", "HelveticaNeue", "Helvetica Neue", sans-serif;
 
 // Convenient extend objects for typography
-.franklin-gothic-book {
-  font-family: $franklin-gothic-book;
+.museo-slab-500 {
+  font-family: $museo-slab-500;
   font-style: normal;
   font-weight: normal;
 }
 
-.franklin-gothic-book-italic {
-  font-family: $franklin-gothic-book-italic;
-  font-style: italic;
-  font-weight: normal;
+%museo-slab-500 {
+  @extend .museo-slab-500;
 }
 
-.franklin-gothic-medium {
-  font-family: $franklin-gothic-medium;
+.sans-serif {
+  font-family: $sans-serif;
   font-style: normal;
   font-weight: normal;
 }
 
-.franklin-gothic-demi {
-  font-family: $franklin-gothic-demi;
-  font-style: normal;
-  font-weight: normal;
-}
-
-%franklin-gothic-book {
-  @extend .franklin-gothic-book;
-}
-
-%franklin-gothic-book-italic {
-  @extend .franklin-gothic-book;
-}
-
-%franklin-gothic-medium {
-  @extend .franklin-gothic-medium;
-}
-
-%franklin-gothic-demi {
-  @extend .franklin-gothic-demi;
+%sans-serif {
+  @extend .sans-serif;
 }
 
 // see base.scss for element's typography
 
-.bordered-heading {
-  @extend %franklin-gothic-medium;
-  border-bottom: 1px solid $black-5;
-  border-top: $decorative-border-width solid $msd-green;
-  margin-top: 0;
-  padding-bottom: 8px;
-  padding-top: 8px;
-}
-
-%bordered-heading {
-  @extend .bordered-heading;
-}
-
-// .h1,
 h1 {
-  @extend %franklin-gothic-book;
   @include font-size(36px);
 }
 
 h2 {
   @include font-size(16px, 24px);
-}
-
-.negative {
-  color: $negative;
-}
-
-.positive {
-  color: $positive;
 }
 
 .lead {
@@ -147,16 +51,5 @@ h2 {
 
 .Hr {
   background-color: transparent;
-  border-color: $black-10;
+  border-color: $black;
 }
-
-// add role="presentation" to element
-.Hr--cf {
-  visibility: hidden;
-}
-
-//  <span class="Required">*</span>
-// .Required {
-//   color: $msd-red;
-//   display: none;
-// }

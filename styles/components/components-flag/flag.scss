@@ -34,13 +34,13 @@
   display: table-cell;
   vertical-align: middle;
 
-  .Flag--top & {
-    vertical-align: top;
-  }
+  // .Flag--top & {
+  //   vertical-align: top;
+  // }
 
-  .Flag--bottom & {
-    vertical-align: bottom;
-  }
+  // .Flag--bottom & {
+  //   vertical-align: bottom;
+  // }
 }
 
 .Flag-image {
@@ -72,8 +72,8 @@
  *
  */
 
-.Flag--hCentered {
-  display: table;
-  margin-left: auto;
-  margin-right: auto;
-}
+// .Flag--hCentered {
+//   display: table;
+//   margin-left: auto;
+//   margin-right: auto;
+// }

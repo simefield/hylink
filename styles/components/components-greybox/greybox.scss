@@ -6,7 +6,7 @@
 .Greybox {
   @media #{$tablet-up} {
     background-color: $greybox;
-    border: 2px solid $black-5;
+    border: 2px solid $black;
     border-radius: $border-radius*1.5;
     // bleed these for .MiddleColumn
     margin-left: -($h);
@@ -21,7 +21,7 @@
 }
 
 .Greybox-footerList-item {
-  border-top: 1px solid $black-10;
+  border-top: 1px solid $black;
 
   &:first-child {
     border-top: 0;
@@ -29,7 +29,7 @@
 }
 
 .Greybox-footerList-link {
-  @extend %franklin-gothic-medium;
+  // @extend %franklin-gothic-medium;
   display: block;
   padding-bottom: $v*.75;
   padding-top: $v*.75;
