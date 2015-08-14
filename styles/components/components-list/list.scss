@@ -1,0 +1,61 @@
+/**
+ * Lists
+ */
+
+// .List {
+// }
+
+// T&Cs
+.List--terms {
+  li {
+    margin-bottom: $v/3;
+  }
+
+  ul {
+    margin-left: $h;
+    margin-top: $v/3;
+  }
+}
+
+// Flush left with bullet points
+.List--alignedBullet {
+  display: table;
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+
+  li {
+    display: table-row;
+  
+    &:before {
+      content: "•";
+      display: table-cell;
+      padding-right: $h/4;
+    }
+  }
+}
+
+/*ul*/
+// .List--terms,
+// .List--terms ul {
+//   list-style-type: none;
+//   // counter-reset: item;
+//   margin: 0;
+//   padding: 0;
+//   > li {
+//     display: table;
+//     // counter-increment: item;
+//     margin-bottom: 0.6em;
+//   }
+//   // & > li:before {
+//   //   content: counters(item, ".") ". ";
+//   //   display: table-cell;
+//   //   padding-right: 0.6em;
+//   // }
+//   li ul > li {
+//     margin: 0;
+//   }
+//   // li ul > li:before {
+//   //   content: counters(item, ".") " ";
+//   // }
+// }

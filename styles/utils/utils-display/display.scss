@@ -1,0 +1,107 @@
+/**
+ * Display-type utilities
+ */
+
+.u-hidden {
+  display: none !important;
+}
+
+.u-sm-hidden {
+  @media #{$mobile-only} {
+    display: none !important;
+  }
+}
+
+.u-md-hidden {
+  @media #{$tablet-only} {
+    display: none !important;
+  }
+}
+
+.u-lg-hidden {
+  @media #{$desktop-up} {
+    display: none !important;
+  }
+}
+
+/**
+ * Completely remove from the flow but leave available to screen readers.
+ */
+
+// .u-hiddenVisually {
+//   border: 0 !important;
+//   clip: rect(1px, 1px, 1px, 1px) !important;
+//   height: 1px !important;
+//   overflow: hidden !important;
+//   padding: 0 !important;
+//   position: absolute !important;
+//   width: 1px !important;
+// }
+
+.u-accessibility {
+  background-color: $white !important; // don't trip accessibility bots up on contrast
+  color: $black !important;
+  left: -999rem !important;
+  position: absolute !important;
+}
+
+// .u-inline {
+//   display: inline !important;
+// }
+
+/**
+ * 1. Fix for Firefox bug: an image styled `max-width:100%` within an
+ * inline-block will display at its default size, and not limit its width to
+ * 100% of an ancestral container.
+ */
+
+
+/**
+ * screen size mixins not currently required
+ */
+
+.u-inlineBlock {
+  display: inline-block !important;
+  max-width: 100%; /* 1 */
+}
+
+/**
+ * screen size mixin
+ */
+
+/**
+ * only use required classes in the mixin to reduce superfluous css
+ */
+
+@mixin display-type($namespace: "") {
+
+  .u-#{$namespace}block {
+    display: block !important;
+  }
+
+  // .u-#{$namespace}table {
+  //   display: table !important;
+  // }
+
+  // .u-#{$namespace}tableCell {
+  //   display: table-cell !important;
+  // }
+
+  // .u-#{$namespace}tableRow {
+  //   display: table-row !important;
+  // }
+}
+
+@include display-type();
+
+@media #{$mobile-only} {
+  @include display-type("sm-");
+}
+
+// @media #{$tablet-only} {
+//   @include display-type("md-");
+// }
+
+// @media #{$desktop-up} {
+//   @include display-type("lg-");
+// }

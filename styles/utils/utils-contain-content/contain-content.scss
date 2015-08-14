@@ -1,0 +1,27 @@
+/**
+ * Center main content areas
+ * used to re-center after parent element stretches full width, e.g. footer
+ */
+
+.u-contain-content {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: $max-content-width;
+  padding-left: $h/2;
+  padding-right: $h/2;
+
+  @media #{$tablet-up} {
+    padding-left: $h;
+    padding-right: $h;
+  }
+}
+
+%u-contain-content {
+  @extend .u-contain-content;
+}
+
+.u-contain-content--bleed {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

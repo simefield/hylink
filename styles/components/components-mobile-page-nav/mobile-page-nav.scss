@@ -1,0 +1,29 @@
+// Main navigation
+// (contained in .Header)
+
+.MobilePageNav {
+  @extend %franklin-gothic-medium;
+  @include font-size(16px, 42px);
+  position: relative;
+  text-align: center;
+
+  @media #{$tablet-up} {
+    display: none;
+  }
+}
+
+// li
+.MobilePageNav-title {
+  // small visual alignment tweak
+  position: relative;
+  top: 2px;
+  white-space: nowrap;
+}
+
+.MobilePageNav-backButton {
+  left: 0;
+  padding-left: $h/4;
+  padding-right: $h/4;
+  position: absolute;
+  top: $v/4;
+}

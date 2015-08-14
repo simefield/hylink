@@ -1,0 +1,73 @@
+/**
+ * Global header
+ */
+
+.Header {
+  background: $white;
+  position: fixed;
+  width: 100%;
+  z-index: $z-header;
+
+  // iOS now appears to remove "fixed" from elements when keyboard open anyway
+  // @media #{$mobile-only} {
+  //   &.virtual-keyboard {
+  //     position: absolute;
+  //   }
+  // }
+}
+
+.Header-container {
+  box-shadow: 0 0 5px rgba($black, .2);
+  min-height: $header-height-sm;
+  padding-bottom: $v/2;
+  padding-top: $v/2;
+  position: relative; // brings drop-shadow forward
+}
+
+.Header-logo {
+  float: left;
+  margin-right: $h;
+  position: relative;
+  top: 14px;
+
+  @media #{$tablet-up} {
+    top: 18px;
+  }
+
+  @media #{$mobile-only} {
+    .IndexPage & {
+      display: none;
+    }
+  }
+}
+
+.Header-clientInfo {
+  float: left;
+
+  @media #{$tablet-up} {
+    position: relative;
+
+    &::before {
+      background-color: $black-20;
+      content: "";
+      height: $v*2;
+      left: -$h/2;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+// h2
+.Header-clientInfo-greeting {
+  @media #{$tablet-up} {
+    @include font-size(20px);
+  }
+}
+
+.Header-clientInfo-number {
+  @media #{$mobile-only} {
+    @include font-size(14px);
+    margin-bottom: -3px; // to match height of mobile page nav
+  }
+}

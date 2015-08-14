@@ -1,0 +1,32 @@
+/**
+ * Distribut grid
+ * distributes elements horizontally equidistant
+ */
+
+.u-distribute {
+  // scss-lint:disable ImportantRule
+  font-size: 0 !important;
+  text-align: justify !important;
+  // scss-lint:enable ImportantRule
+  text-justify: distribute-all-lines;
+
+  > * {
+    display: inline-block;
+    font-size: medium;
+    // text-align: left; // reset text alignment
+    vertical-align: top;
+  }
+}
+
+.u-distribute::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+// .u-distribute--middle > * {
+//   vertical-align: middle;
+// }
+// .u-distribute--bottom > * {
+//   vertical-align: bottom;
+// }

@@ -1,0 +1,112 @@
+/**
+ * Icons
+ */
+
+$icon-size-lg: 89px;
+$icon-size-md: 72px;
+$icon-size-sm: 50px;
+$icon-scale-lg-md: ($icon-size-md / $icon-size-lg) * 1; // remove unit
+$icon-scale-md-sm: ($icon-size-sm / $icon-size-md) * 1; // remove unit
+
+.Icon {
+  background-color: $msd-purple; // default
+  border-radius: 100%;
+  color: $white;
+  display: inline-block;
+  height: $icon-size-md;
+  position: relative; // for absolute positioning of icon images
+  width: $icon-size-md;
+  
+  img,
+  svg {
+    // centering: https://css-tricks.com/centering-percentage-widthheight-elements/
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    // scss-lint:disable VendorPrefix
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    // scss-lint:enable VendorPrefix
+    transform: translate(-50%, -50%);
+  }
+
+  // not "mobile first" - despite being ScalableVG, I still prefer to scale images down than up... call me old-fashioned
+  @media #{$mobile-only} {
+    height: $icon-size-sm;
+    width: $icon-size-sm;
+
+    img,
+    svg {
+      // scss-lint:disable VendorPrefix
+      -ms-transform: translate(-50%, -50%) scale($icon-scale-md-sm);
+      -webkit-transform: translate(-50%, -50%) scale($icon-scale-md-sm);
+      // scss-lint:enable VendorPrefix
+      transform: translate(-50%, -50%) scale($icon-scale-md-sm);
+    }
+  }
+}
+
+.Icon--lg {
+  height: $icon-size-lg;
+  width: $icon-size-lg;
+
+  @media #{$mobile-only} {
+    height: $icon-size-md;
+    width: $icon-size-md;
+
+    img,
+    svg {
+      // scss-lint:disable VendorPrefix
+      -ms-transform: translate(-50%, -50%) scale($icon-scale-lg-md);
+      -webkit-transform: translate(-50%, -50%) scale($icon-scale-lg-md);
+      // scss-lint:enable VendorPrefix
+      transform: translate(-50%, -50%) scale($icon-scale-lg-md);
+    }
+  }
+}
+
+.Icon--green,
+.Icon--card,
+.Icon--job-seeker,
+.Icon--job-seeker-student {
+  background-color: $msd-green;
+}
+
+.Icon--teal,
+.Icon--youth-payment,
+.Icon--emergency-allowance,
+.Icon--emergency-benefit,
+.Icon--living-payment,
+.Icon--living-payment-overseas,
+.Icon--widows-benefit,
+.Icon--orphans-benefit,
+.Icon--supplementary-assistance {
+  background-color: $msd-teal;
+}
+
+.Icon--salmon,
+.Icon--calendar,
+.Icon--sole-parent,
+.Icon--sole-parent-overseas,
+.Icon--system-error,
+.Icon--unsupported-child {
+  background-color: $msd-salmon;
+}
+
+.Icon--blue,
+.Icon--young-parent {
+  background-color: $msd-blue;
+}
+
+.Icon--purple,
+.Icon--veteran-pension,
+.Icon--super {
+  background-color: $msd-purple;
+}
+
+// $msd-salmon -- parenting, error icons
+// $msd-green --- job seeker, employment
+// $msd-cyan ---- supported living, health
+// $msd-teal ---- disability
+// $msd-purple -- housing, pensions
+// $msd-blue ---- extra allowance

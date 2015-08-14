@@ -1,0 +1,49 @@
+/**
+ * Messages
+ *
+ * HTML_CodeSniffer fails the contrast on these, because it can't calculate the colour produced by the background transparency
+ * the following colours DO meet the 4.5:1 contrast criteria
+ */
+
+$alert-box: #d03633;
+$alert-text: $alert-box;
+$success-box: #388314;
+$success-text: $success-box;
+
+.Message {
+  // @extend %franklin-gothic-medium;
+  @include font-size(15px, 20px);
+  border-radius: $border-radius; 
+  border-style: solid;
+  border-width: 2px;
+  padding: 10px $h*.75 $v/3 $h*2/3; // extra space on right for icon
+  text-align: center;
+}
+
+.Message-icon {
+  float: right;
+  margin-right: -($h*4/3);
+  margin-top: -3px; // small visual tweak
+}
+
+.Message--alert {
+  background-color: rgba($alert-box, .05);
+  border-color: $alert-box;
+  color: $alert-text;
+  padding-right: $h*1.75; 
+}
+
+.Message-icon-alert path {
+  fill: $alert-text;
+}
+
+.Message--success {
+  background-color: rgba($success-box, .05);
+  border-color: $success-box;
+  color: $success-text;
+  padding-right: $h*1.75;
+}
+
+.Message-icon-success path {
+  fill: $success-text;
+}

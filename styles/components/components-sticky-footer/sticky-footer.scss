@@ -1,0 +1,53 @@
+// sticky footer
+// http://colintoh.com/blog/display-table-anti-hero
+
+// <div class="StickyFooter-wrapper">
+//   <div class="StickyFooter-header">HEADER</div>
+//   <div class="StickyFooter-body">
+//    content...
+//   </div>
+//   <div class="StickyFooter-footer">FOOTER</div>
+// </div>
+
+html,
+body {
+  height: 100%;
+}
+
+.StickyFooter-wrapper {
+  display: table;
+  height: 100%;
+  width: 100%;
+}
+
+// doesn't appear to be necessary, but breaks the drop-shadow on the header when present
+// .StickyFooter-header {
+//   display: table-row;
+//   height: 1px;
+// }
+
+.StickyFooter-body {
+  display: table;
+  // IE9/10 require this to be table-cell to obey the height declaration
+  // display: table-cell;
+  // but this busts IE layout in mobile view, hmpff... so...
+  // @media #{$mobile-only} {
+  //   display: table;
+  // }
+  // but that breaks inner page layout... arghh
+  // solution: revert to display: table, then move frangipani to footer
+   
+  height: 100%;
+  width: 100%;
+  
+  .LoginPage & {
+    @media #{$mobile-only} {
+      background-color: $greybox;
+    }
+  }
+}
+
+.StickyFooter-footer {
+  display: table-row;
+  height: 1px;
+}

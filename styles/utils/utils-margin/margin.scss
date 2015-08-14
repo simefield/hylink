@@ -1,0 +1,67 @@
+/**
+ * MARGINS
+ */
+
+/**
+ * screen size mixins not currently required
+ */
+
+.u-mT--xs { margin-top: $v/4 !important; }
+.u-mT--sm { margin-top: $v/2 !important; }
+.u-mT--xl { margin-top: $v*2 !important; }
+
+/**
+ * NOTE: each line here adds 9 lines of code to css, so onyl create new classes if absolutely necessary
+ */
+@mixin margin($namespace: "") {
+  // * margin top
+  .u-#{$namespace}mT--0 { margin-top: 0 !important; }
+  // .u-#{$namespace}mT--xs { margin-top: $v/4 !important; }
+  // .u-#{$namespace}mT--sm { margin-top: $v/2 !important; }
+  .u-#{$namespace}mT--md { margin-top: $v !important; }
+  .u-#{$namespace}mT--lg { margin-top: $v*1.5 !important; }
+  // .u-#{$namespace}mT--xl { margin-top: $v*2 !important; }
+  // .u-#{$namespace}mT--xx { margin-top: $v*3 !important; }
+
+  // // * margin bottom
+  // .u-#{$namespace}mB--0 { margin-bottom: 0 !important; }
+  // .u-#{$namespace}mB--xs { margin-bottom: $v/4 !important; }
+  // .u-#{$namespace}mB--sm { margin-bottom: $v/2 !important; }
+  // .u-#{$namespace}mB--md { margin-bottom: $v !important; }
+  // .u-#{$namespace}mB--lg { margin-bottom: $v*1.5 !important; }
+  // .u-#{$namespace}mB--xl { margin-bottom: $v*2 !important; }
+  // .u-#{$namespace}mB--xx { margin-bottom: $v*3 !important; }
+
+  // * margin left
+  .u-#{$namespace}mL--sm { margin-left: $v/2 !important; }
+}
+
+@include margin();
+
+@media #{$mobile-only} {
+  @include margin("sm-");
+}
+
+@media #{$tablet-only} {
+  @include margin("md-");
+}
+
+@media #{$desktop-up} {
+  @include margin("lg-");
+}
+
+// generates:
+//
+// .u-mT--0 { margin-top: 0; }
+// .u-mT--xs { margin-top: 4px; }
+// .u-mT--sm { margin-top: 8px; }
+// .u-mT--md { margin-top: 16px; }
+// ...
+//
+// @media (min-width: 48em) {
+//     .u-md-mT--0 { margin-top: 0; }
+//     .u-md-mT--xs { margin-top: 4px; }
+//     ...
+// }
+//
+// etc...

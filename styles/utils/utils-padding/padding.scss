@@ -1,0 +1,73 @@
+/**
+ * PADDINGS
+ */
+
+/**
+ * screen size mixins not currently required
+ */
+
+// padding left
+.u-pL--sm { padding-left: $v/2 !important; }
+
+// padding right
+.u-pR--0 { padding-right: 0 !important; }
+.u-pR--sm { padding-right: $v/2 !important; }
+
+// padding bottom
+.u-pB--sm { padding-bottom: $v/2 !important; }
+.u-pB--md { padding-bottom: $v !important; }
+.u-pB--lg { padding-bottom: $v*1.5 !important; }
+
+/**
+ * NOTE: each line here adds 9 lines of code to css, so onyl create new classes if absolutely necessary
+ */
+@mixin padding($namespace: "") {
+  // * padding left
+  // .u-#{$namespace}pL--0 { padding-left: 0 !important; }
+  // .u-#{$namespace}pL--xs { padding-left: $v/4 !important; }
+  // .u-#{$namespace}pL--sm { padding-left: $v/2 !important; }
+  // .u-#{$namespace}pL--md { padding-left: $v !important; }
+  .u-#{$namespace}pL--lg { padding-left: $v*1.5 !important; }
+  // .u-#{$namespace}pL--xl { padding-left: $v*2 !important; }
+  // .u-#{$namespace}pL--xx { padding-left: $v*3 !important; }
+
+  // * padding right
+  // .u-#{$namespace}pR--0 { padding-right: 0 !important; }
+  // .u-#{$namespace}pR--xs { padding-right: $v/4 !important; }
+  // .u-#{$namespace}pR--sm { padding-right: $v/2 !important; }
+  .u-#{$namespace}pR--md { padding-right: $v !important; }
+  .u-#{$namespace}pR--lg { padding-right: $v*1.5 !important; }
+  // .u-#{$namespace}pR--xl { padding-right: $v*2 !important; }
+  // .u-#{$namespace}pR--xx { padding-right: $v*3 !important; }
+}
+
+
+@include padding();
+
+@media #{$mobile-only} {
+  @include padding("sm-");
+}
+
+@media #{$tablet-only} {
+  @include padding("md-");
+}
+
+@media #{$desktop-up} {
+  @include padding("lg-");
+}
+
+// generates:
+//
+// .u-pL--0 { padding-left: 0; }
+// .u-pL--xs { padding-left: 4px; }
+// .u-pL--sm { padding-left: 8px; }
+// .u-pL--md { padding-left: 16px; }
+// ...
+//
+// @media (min-width: 48em) {
+//     .u-md-pL--0 { padding-left: 0; }
+//     .u-md-pL--xs { padding-left: 4px; }
+//     ...
+// }
+//
+// etc...

@@ -1,0 +1,36 @@
+/**
+ * Greybox
+ * – used in the login flows as a container with grey background
+ */
+
+.Greybox {
+  @media #{$tablet-up} {
+    background-color: $greybox;
+    border: 2px solid $black-5;
+    border-radius: $border-radius*1.5;
+    // bleed these for .MiddleColumn
+    margin-left: -($h);
+    margin-right: -($h);
+    margin-top: $v/2;
+    padding: $v*1.25 $h*2 $v*1.5;
+  }
+}
+
+.Greybox-footerList {
+  margin-top: $v;
+}
+
+.Greybox-footerList-item {
+  border-top: 1px solid $black-10;
+
+  &:first-child {
+    border-top: 0;
+  }
+}
+
+.Greybox-footerList-link {
+  @extend %franklin-gothic-medium;
+  display: block;
+  padding-bottom: $v*.75;
+  padding-top: $v*.75;
+}

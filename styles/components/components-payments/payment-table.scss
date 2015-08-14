@@ -1,0 +1,41 @@
+/**
+ * Payments table
+ */
+
+// table
+
+.PaymentTable {
+  width: 100%;
+
+  td,
+  .PaymentTable-td {
+    padding: 10px $h/2;
+    vertical-align: top;
+  }
+
+  th {
+    // @extend %bordered-heading;
+    padding-left: $h/2;
+    padding-right: $h/2;
+    text-align: left;
+  }
+
+  tfoot {
+    background-color: $black-5;
+  }
+}
+
+// td
+
+.PaymentTable-amount {
+  @extend strong;
+  border-left: 1px solid $black-10;
+}
+
+.PaymentTable-total {
+  // td,
+  th {
+    // border-top: 1px solid $white;
+    border-top: 0;
+  }
+}

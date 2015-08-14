@@ -1,0 +1,102 @@
+/**
+ * colours
+ *
+ * Note: IE9 requires full hex colour declarations #cccccc, not #ccc
+ * for  css gradients to render correctly)
+ */
+
+// Greys
+$white:    #fff;
+$black:    #000;
+$black-90: #1f1f1f; // (88%)
+$black-80: #333;
+$black-70: #4d4d4d;
+$black-60: #666;
+$black-50: #808080;
+$black-40: #999;
+$black-30: #b3b3b3;
+$black-20: #ccc;
+$black-10: #ddd; // (12%)
+$black-5:  #f2f2f2;
+$black-2:  #fafafa;
+$black-0:  $white;
+
+// Brand
+$msd-dark-blue: #134276;
+$msd-navy: #162c45;
+$msd-light-grey: $black-5;
+
+$msd-red: #f75c58;
+$msd-salmon: $msd-red; // parenting, error icons
+$msd-green: #06b271; // job seeker, employment
+$msd-cyan: #32c3d9; // supported living, health
+$msd-teal: #35c0ba; // disability
+// $msd-teal: #00bba1;
+$msd-purple: #3a54a1; // housing, pensions
+// $msd-blue: #017ac9; // extra allowance
+// darken blue a dash to scrape through on accessibility contrast requirements (was failing when in a .Greybox -- $greybox)
+$msd-blue: #017ac9; // extra allowance
+
+$msd-pale-blue: rgba($msd-blue, .05);
+
+$msd-dark-blue: #125da3;
+$realme-blue: $msd-dark-blue;
+// $greybox:  #f7f7f7;
+$greybox:  #f8f8f8;
+
+$error: $msd-red;
+$negative: #d84935;
+$positive: $msd-green;
+
+// Links
+$link: $msd-blue;
+
+/**
+ * Font variables
+ * - used largely as base settings in base.scss – a thin layer on top of normalize.css
+ */
+
+// $base-background: inherit;
+$base-colour: $black;
+$base-font-size: 16px !default;
+// $base-font: $base-font-size "HelveticaNeue-Thin", sans-serif;
+$base-link-color: $link;
+$base-link-color-hover: $base-link-color;
+$base-line-height: 1.5;
+$decorative-border-width: 3px;
+
+// spacing units
+$v: $base-line-height*$base-font-size;  // 1.5rem (= 24px)
+$h: $v;
+$border-radius: 5px;
+
+$max-content-width: 60rem;
+
+// Narrow middle column content, e.g. login/registration process pages
+// Setting to 375px which is both the iPhone 6's width resolution
+// $middle-column-width: $h*15.625;
+// $middle-column-width: 23.4375em;
+$middle-column-width: 28.75em; // 460
+
+// Header height
+$header-height-sm: 68px; // mobile
+// $header-height-lg: 78px; // tablet & desktop
+$margin-below-header: $v*2;
+$margin-below-header: 0;
+
+// page bottm padding
+$page-bottom-padding: $v*2;
+
+// Sidebar
+// $sidebar-width: $h * 12;
+$sidebar-width: $h * 12.16666666666667; // = 292px... matches width of calendar
+$sidebar-width-narrow: $h * 9.666667;
+
+/**
+ * z-indexes
+ */
+$z-modal:   30;
+$z-header:    20;
+// $z-popup:     10;
+$z-nudge:    1;
+// $z-negative:   -10;

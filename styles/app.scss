@@ -1,0 +1,150 @@
+@import "variables";
+@import "base/index";
+@import "utils/index";
+@import "components/index";
+// @import "ember-modal-dialog/ember-modal-structure";
+// @import "ember-modal-dialog/ember-modal-appearance";
+
+.BuildNumber {
+  @include font-size(13px);
+  background-color: rgba($white, .7);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  color: $msd-navy;
+  padding: $v/4 $h/2 $v/6;
+
+  @media #{$mobile-only} {
+    margin-bottom: -30px;
+  }
+
+  @media #{$tablet-up} {
+    float: right;
+  }
+}
+
+/**
+ * Main content container
+ * - includes top padding allowance for header
+ */
+
+.MainContent {
+  @extend %u-contain-content;
+
+  // let's squeeze it up a bit more for mobile users
+  @media #{$mobile-only} {
+    margin-top: -($v/2);
+  }
+  // negative margin-bottoms go on elements requiring flush sitting with .Footer, e.g. .MagicList, .ContactDetails
+  padding-bottom: $page-bottom-padding;
+}
+
+
+/**
+ * Sidebar
+ */
+
+.Sidebar {
+  padding-right: $h; // this manifests as the margin between the side nav and the main content
+  width: $sidebar-width;
+}
+
+.Sidebar--narrow {
+  width: $sidebar-width-narrow;
+}
+
+/**
+ * Centered middle column for login process
+ */
+
+.MiddleColumn {
+  max-width: $h*16;
+  text-align: center;
+
+  @media #{$tablet-up} {
+    max-width: $middle-column-width;
+    // bleed these back out in .Greybox
+    padding-left: $h;
+    padding-right: $h;
+    // behave nicely with the .Motif frangipani
+    background-color: $white;
+    border-radius: $border-radius*1.5;
+    position: relative;
+    z-index: $z-nudge;
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+}
+
+/**
+ * Labels
+ */
+
+.Label-text {
+  display: block;
+  padding-bottom: $v/6;
+  text-align: left;
+}
+
+.Label-link {
+  @extend %franklin-gothic-medium;
+  @include font-size(13px, 28px);
+  float: right;
+}
+
+// similar to .Label-link, but positioned as if inside input box
+// (requires a .u-posRelative div wrapper in the html)
+.Input-link {
+  @extend %franklin-gothic-medium;
+  @include font-size(13px, 28px);
+  position: absolute;
+  right: $h*.75;
+  top: 10px;
+
+  // these links sit on top of where IE puts its input's clear button
+  & + input::-ms-clear {
+    display: none;
+  }
+}
+
+/**
+ * Disguise telephone links on tablet and desktop
+ */
+
+@media #{$tablet-up} {
+  [href*="tel"] {
+    color: inherit;
+    cursor: default;
+
+    &:hover,
+    &:focus {
+      color: inherit;
+    }
+  }
+}
+
+.OngoingPaymentMsg {
+  border-bottom: 1px solid $black-10;
+  border-top: 1px solid $black-10;
+  padding-bottom: $v*1.5;
+
+  @media #{$tablet-up} {
+    padding-left: $v*3;
+    padding-right: $v*3;
+  }
+}
+
+// Accessibility page Keys
+.KeyPress {
+  @extend %franklin-gothic-medium;
+  @include font-size(18px, 40px);
+  background-color: $white;
+  border: 2px solid $black-10;
+  border-radius: $border-radius;
+  padding: 8px $h/2 6px;
+}
+
+.u-colorLink path {
+    fill: $link;
+}

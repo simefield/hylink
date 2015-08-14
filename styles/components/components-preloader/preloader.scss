@@ -1,0 +1,34 @@
+/**
+ * Preloader... spinner
+ */
+
+// default preloader colour (on a white background)
+.msd-preloader path {
+  fill: $black-50;
+}
+
+// preloader on a button
+.Button-hasLoader path {
+  fill: $white;
+}
+
+// @-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+// @keyframes spin { 100% { transform:rotate(360deg); } }
+
+.Button .msd-preloader {
+  // -webkit-animation: spin 1500ms steps(12) infinite;
+  // animation: spin 1500ms steps(12) infinite;
+  display: none;
+  height: 25px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: 25px;
+}
+
+.Button-hasLoader[disabled],
+.Button-hasLoader.disabled {
+  .msd-preloader {
+    display: block;
+  }
+}

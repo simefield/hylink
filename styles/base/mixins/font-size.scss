@@ -1,0 +1,14 @@
+/**
+ * Font size / line height mixin
+ * 
+ * Note: base-font-size must be defined in pixels, i.e. $base-font-size: 16px !default;
+ */
+
+@mixin font-size($font-size: $base-font-size, $line-height: null) {
+  font-size: ($font-size / $base-font-size)*1rem;  // convert px to rem
+  @if $line-height != null {
+    line-height: ($line-height / $font-size);
+  }
+}
+
+// e.g. @include font-size(18px, 22px);

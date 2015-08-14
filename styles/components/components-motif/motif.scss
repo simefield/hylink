@@ -1,0 +1,56 @@
+
+.Motif {
+  // a small handful of older browsers will still load the image – but they're small .svg's, and of no real consequence
+  display: none;
+  position: absolute;
+}
+
+/**
+ * .LoginPage class added dynamically to html element
+ * on any pages where user is not authenticated (login flows)
+ */
+
+.LoginPage {
+  // for positioning of motifs
+  // .StickyFooter-body {
+  //   position: relative;
+  // }
+  // we have to whack the frangipani in with the footer logos
+  // due to IE's 9 & 10 not handling the 100% height on .StickyFooter-body
+  .Footer-logos {
+    position: relative;
+  }
+
+  @media #{$tablet-up} {
+    .Motif-single,
+    .Motif-single-2,
+    .Motif-multi {
+      display: block;
+    }
+
+    .Motif-single {
+      left: 20%;
+      top: -36px;
+    }
+
+    .Motif-single-2 {
+      bottom: -36px;
+      right: -24px;
+    }
+
+    .Motif-multi {
+      top: -318px; // height of graphic
+      left: 0;
+    }
+  }
+}
+
+.WelcomePage {
+  @media #{$mobile-only} {
+    .Motif-multi-mobile {
+      top: -201px; // height of graphic
+      display: block;
+      left: 0;
+    }
+  }
+}

@@ -1,0 +1,85 @@
+// Global footer
+
+// .Footer {
+  // background-color: $msd-dark-blue;
+  // margin-top: $v*2; // ineffective with sticky footer
+// }
+
+// img
+
+.Footer-logos {
+  background-image: url("images/footer-bg.png");
+  background-position: 50% 0;
+  background-repeat: repeat;
+  padding-bottom: $v*1.5;
+  padding-top: $v*1.5;
+}
+
+.Footer-logos-container {
+  @extend %u-contain-content;
+}
+
+.Footer-logo-msd {
+  // max-width: 209px; // IE9 balks on the ratio
+  height: 50px;
+  width: 209px;
+
+  @media #{$mobile-only} {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.Footer-logo-nzg {
+  // max-width: 199px; // IE9 balks on the ratio
+  height: 21px;
+  width: 199px;
+}
+
+// text link version for mobile
+.Footer-textLink-nzg {
+  @include font-size(14px);
+  display: block;
+  text-align: center;
+}
+
+.Footer-legal {
+  background-color: $msd-navy;
+
+  @media #{$mobile-only} {
+    text-align: center;
+  }
+}
+
+// li
+.Footer-legal-list-item {
+  display: inline;
+}
+
+.Footer-legal-content {
+  @extend %u-contain-content;
+  @include font-size(14px);
+  color: $white;
+  padding-bottom: $v*1.25;
+  padding-top: $v*1.25;
+
+}
+
+// a
+.Footer-legal-nav-item {
+  &.Footer-legal-nav-item { // specificity hack
+    color: inherit;
+  }
+
+  @media #{$tablet-up} {
+    display: inline-block;
+  }
+}
+
+
+// | pipe
+.Footer-legal-delimeter {
+  padding-left: 4px;
+  padding-right: 4px;
+}

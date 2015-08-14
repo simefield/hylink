@@ -1,0 +1,41 @@
+/**
+ * Floats
+ */
+
+// .u-floatNone {
+//   float: none !important;
+// }
+
+// .u-floatLeft {
+//   float: left !important;
+// }
+
+// .u-floatRight {
+//   float: right !important;
+// }
+
+/**
+ * only use required classes in the mixin to reduce superfluous css
+ */
+
+.u-floatRight { float: right !important; }
+
+@mixin float($namespace: "") {
+  // .u-#{$namespace}floatNone { float: none !important; }
+  .u-#{$namespace}floatLeft { float: left !important; }
+  // .u-#{$namespace}floatRight { float: right !important; }
+}
+
+@include float();
+
+// @media #{$mobile-only} {
+//   @include float("sm-");
+// }
+
+@media #{$tablet-only} {
+  @include float("md-");
+}
+
+@media #{$desktop-up} {
+  @include float("lg-");
+}

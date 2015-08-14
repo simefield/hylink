@@ -1,0 +1,92 @@
+/**
+ * Sidenav
+ */
+
+$sidenav-border-color: $black-10;
+
+// ul
+.Sidenav {
+  border: 1px solid $sidenav-border-color;
+  margin-top: 0;
+}
+
+// li
+.Sidenav-item {
+  border-bottom: 1px solid $sidenav-border-color;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+
+.Sidenav-title {
+  @extend strong;
+  border-bottom: $decorative-border-width solid $msd-green;
+}
+
+// a
+.Sidenav-link {
+  display: block;
+  padding: $v*.75 $h*1.25;
+
+  &.Sidenav-link { // specificity hack
+    color: $base-colour;
+  }
+
+  &.active {
+    background-color: $msd-pale-blue;
+  }
+}
+
+.Sidenav-item-icon {
+  opacity: .3;
+}
+
+// ul
+.Sidenav--sansTitle {
+  border-top: $decorative-border-width solid $msd-green;
+}
+
+// Magic sidenav (appears above footer on tablet and down)
+// effectively the same as .MagicList
+// with much code replicatation - keep in synch!
+
+// ul
+.Sidenav--magic {
+  border-bottom: 1px solid $black-10;
+  // bleed and counter page bottom padding
+  margin: $v*1.5 (-$h) (-$v*2 - 1); // -1 margin bottom to avoid double-margin with .ButtonList below it
+  text-align: left;
+
+  @media #{$mobile-only} {
+    margin-left: (-$h/2);
+    margin-right: (-$h/2);
+  }
+}
+// li
+.Sidenav--magic-item {
+  border-top: 1px solid $black-10;
+}
+
+// a
+.Sidenav--magic-link {
+  // put this image inline as calc() on background images crashes IE9
+  // background-image: url("images/icon-arrow-right.svg");
+  // background-position: calc(100% - 12px) 31px;
+  // background-repeat: no-repeat;
+  display: block;
+  padding: $v $h;
+
+  &:focus,
+  &:hover {
+    background-color: $black-2;
+  }
+
+  &.Sidenav--magic-link { // specificity hack
+    color: $base-colour;
+  }
+}
+
+.Sidenav--magic-item-arrow {
+  float: right;
+}

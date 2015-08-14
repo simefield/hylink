@@ -1,0 +1,165 @@
+/**
+* $PRINT CSS
+*/
+
+// scss-lint:disable ImportantRule Indentation
+
+/**
+* NOT @media print styles
+*/
+
+.u-print--only { display: none !important; }
+
+/**
+* @media print styles
+*/
+
+@media print {
+
+  /**
+   * Helpers
+   */
+
+  %u-print--none { display: none !important; }
+  %u-print { display: block !important; }
+  %u-print--only { @extend %u-print; }
+  %u-print--one-whole { width: 100% !important; }
+
+  .u-print--none { @extend %u-print--none; }
+  .u-print {
+    @extend %u-print;
+    // increased specificity:
+    &.u-hidden,
+    &.u-sm-hidden {
+      @media #{$mobile-only} {
+        display: block !important;
+      }
+    }
+  }
+
+  .u-print--only { @extend %u-print--only; }
+  .u-print--one-whole { @extend %u-print--one-whole; }
+
+  /*
+  * H5BP print styles -inlined to avoid required HTTP connection: h5bp.com/r
+  * Source: https://github.com/h5bp/html5-boilerplate/blob/master/css/main.css
+  */
+
+  * {
+    background: transparent !important;
+    border-color: $black !important;
+    box-shadow: none !important;
+    color: $black !important; /* Black prints faster: h5bp.com/s */
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid $black-50;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group; /* h5bp.com/t */
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: .5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /**
+   * Global
+   */
+
+  html {
+    @include font-size(12px);
+  }
+
+  /**
+   * Local / specific
+   */
+
+  .Header {
+    margin-bottom: 24px;
+    margin-top: 8px;
+    position: relative !important;
+  }
+
+  .Header-logo {
+    top: 7px !important;
+  }
+
+  // .Header,
+  .Footer,
+  .Motif,
+  .Button {
+    @extend %u-print--none;
+  }
+
+  .MainContent {
+    max-width: none !important;
+    padding-bottom: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .u-contain-content,
+  .MiddleColumn {
+    max-width: none !important;
+  }
+
+  /**
+  * Printable modals
+  */
+
+  .ember-modal-overlay {
+    background-color: $white !important;
+    width: 100% !important;
+  }
+
+  .ember-modal-dialog {
+    height: 100%;
+    left: 0 !important;
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    max-height: none !important;
+    max-width: none !important;
+    position: relative !important;
+    top: 0 !important;
+  }
+
+  /**
+  * SVGs and Icons
+  */
+
+  svg path {
+    fill: $black !important;
+  }
+}
+
+// scss-lint:enable ImportantRule Indentation

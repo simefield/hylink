@@ -1,0 +1,77 @@
+/**
+ * Input object
+ */
+
+$input-margin: $h/3; // space between input boxes
+
+// .Input {}
+
+// Input type
+// classname or type attr selector?
+// [type="number"],
+[type="password"],
+[type="text"],
+[type="number"],
+[type="tel"] {
+  -webkit-appearance: none;
+  background-color: $black-5;
+  border-color: $black-10;
+  border-radius: $border-radius;
+  border-style: solid;
+  border-width: 2px;
+  padding: 11px $h/2;
+
+  &:focus {
+    background-color: $white;
+    outline: 0;
+  }
+}
+
+// hide number spinners
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+[type="number"] {
+  -moz-appearance: textfield;
+}
+
+:required,
+:invalid,
+:-moz-submit-invalid,
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+
+
+.Input-pinEntry {
+  text-align: center;
+}
+
+.Input--error {
+  border-color: $error;
+}
+
+/**
+ * Distribute input boxes
+ * e.g. 4 x PIN number inputs, or date of birth fields
+   <div class="u-distribute">
+     <input type="number" id="dateOfBirth-dd" class="Input--width1of4">
+     <input type="number" id="dateOfBirth-mm" class="Input--width1of4">
+     <input type="number" id="dateOfBirth-yyyy" class="Input--width1of2">
+   </div>
+ */
+
+// scss-lint:disable DuplicateProperty
+.Input--width1of4 {
+  width: 20%; // fallback for oldies
+  width: calc(25% - #{$input-margin});
+}
+
+.Input--width1of2 {
+  width: 45%; // fallback for oldies
+  width: calc(50% - #{$input-margin});
+}
+// scss-lint:enable DuplicateProperty

@@ -1,0 +1,29 @@
+/**
+ * Payments overview
+ */
+
+// .PaymentOverview {
+// }
+
+// .PaymentOverview-icon {
+// }
+
+.PaymentOverview-name {
+  @include font-size(24px);
+}
+
+// .PaymentOverview-day {
+// }
+
+.PaymentOverview-amount {
+  @extend b;
+  @include font-size(40px, 40px);
+  display: block;
+  white-space: nowrap;
+}
+
+.PaymentOverview-amount--small {
+  @include font-size(20px);
+  line-height: normal;
+  vertical-align: top;
+}

@@ -1,0 +1,39 @@
+/**
+ * RealMe login button
+ */
+
+$realme-button-height: 44px;
+
+.RealmeLogin {
+  display: inline-block; // necessary for applying top margins, e.g. after an ---OR--- component
+  width: 100%;
+}
+
+.RealmeLogin-logo {
+  float: left;
+  height: $realme-button-height;
+  // margin-right: $h/4;
+}
+
+.RealmeLogin-button {
+  background-color: $realme-blue;
+  border-radius: $border-radius;
+  color: $white;
+  display: block;
+  height: $realme-button-height;
+  line-height: $realme-button-height;
+  margin-left: $realme-button-height + $h/4; // plus margin
+  padding-left: $h*.75;
+  padding-right: $h*.75;
+  text-align: left;
+}
+
+.RealmeLogin-button-iconLock {
+  margin-top: 16px;
+}
+
+.RealmeLogin-button-iconLink {
+  margin-left: $h/6;
+  position: relative;
+  top: -1px;
+}
