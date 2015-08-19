@@ -1,6 +1,30 @@
 /**
  * Typography
+ */
+
+/**
+ * @license
+ * MyFonts Webfont Build ID 3077797, 2015-08-19T04:29:26-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MuseoSlab-300 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/300/
+ * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+ * Licensed pageviews: 500,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3077797
+ * 
+ * c 2015 MyFonts Inc
 */
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2ef6a5"); 
   
 @font-face {
   font-family: "museo-slab-500";
@@ -8,9 +32,15 @@
     url("fonts/museo_slab_500-webfont.woff") format("woff");
 }
 
+@font-face {
+  font-family: "museo-slab-300";
+  src: url("fonts/museo_slab_300-webfont.woff2") format("woff2"),
+    url("fonts/museo_slab_300-webfont.woff") format("woff");
+}
+
 // Font stack variable
 $museo-slab-500: "museo-slab-500", sans-serif;
-$sans-serif: "HelveticaNeue-Light", "HelveticaNeue-Roman", "HelveticaNeue-Medium", "HelveticaNeue", "Helvetica Neue", sans-serif;
+$museo-slab-300: "museo-slab-300", Avenir, "HelveticaNeue-Light", "HelveticaNeue-Roman", sans-serif;
 
 // Convenient extend objects for typography
 .museo-slab-500 {
@@ -23,17 +53,21 @@ $sans-serif: "HelveticaNeue-Light", "HelveticaNeue-Roman", "HelveticaNeue-Medium
   @extend .museo-slab-500;
 }
 
-.sans-serif {
-  font-family: $sans-serif;
+.museo-slab-300 {
+  font-family: $museo-slab-300;
   font-style: normal;
   font-weight: normal;
 }
 
-%sans-serif {
-  @extend .sans-serif;
+%museo-slab-300 {
+  @extend .museo-slab-300;
 }
 
 // see base.scss for element's typography
+
+.h0 {
+  @include font-size(48px);
+}
 
 h1 {
   @include font-size(36px);

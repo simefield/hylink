@@ -10,12 +10,13 @@
  */
 
 html {
+  @include font-size(17px, 31px);
   background-color: $white;
   color: $white;
 
   // @media #{$tablet-up} {
     // https://css-tricks.com/perfect-full-page-background-image/
-    background-image: url("images/bg.jpg"); // won't be loaded by most mobile browsers
+    background-image: url("images/-bg.jpg"); // won't be loaded by most mobile browsers
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -24,8 +25,8 @@ html {
 }
 
 .IntroContent {
-  background-color: rgba($black, 0.7);
-  height: 100vh;
+  // background-color: rgba($blue, 1);
+  // height: 100vh;
   padding: $v $h*2;
 }
 

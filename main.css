@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("//hello.myfonts.net/count/2ef6a5");
 /**
  * colours
  *
@@ -7,7 +8,7 @@
  */
 /**
  * Font variables
- * - used largely as base settings in base.scss – a thin layer on top of normalize.css
+ * (used largely as base settings in base.scss)
  */
 /**
  * z-indexes
@@ -372,10 +373,34 @@ hr {
  */
 /**
  * Typography
+ */
+/**
+ * @license
+ * MyFonts Webfont Build ID 3077797, 2015-08-19T04:29:26-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: MuseoSlab-300 by exljbris
+ * URL: http://www.myfonts.com/fonts/exljbris/museo-slab/300/
+ * Copyright: Copyright (c) 2009 by Jos Buivenga. All rights reserved.
+ * Licensed pageviews: 500,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3077797
+ * 
+ * c 2015 MyFonts Inc
 */
+/* @import must be at top of file, otherwise CSS will not work */
 @font-face {
   font-family: "museo-slab-500";
   src: url("fonts/museo_slab_500-webfont.woff2") format("woff2"), url("fonts/museo_slab_500-webfont.woff") format("woff"); }
+@font-face {
+  font-family: "museo-slab-300";
+  src: url("fonts/museo_slab_300-webfont.woff2") format("woff2"), url("fonts/museo_slab_300-webfont.woff") format("woff"); }
 .museo-slab-500, h1,
 h2,
 h3 {
@@ -383,10 +408,13 @@ h3 {
   font-style: normal;
   font-weight: normal; }
 
-.sans-serif, html {
-  font-family: "HelveticaNeue-Light", "HelveticaNeue-Roman", "HelveticaNeue-Medium", "HelveticaNeue", "Helvetica Neue", sans-serif;
+.museo-slab-300, html {
+  font-family: "museo-slab-300", Avenir, "HelveticaNeue-Light", "HelveticaNeue-Roman", sans-serif;
   font-style: normal;
   font-weight: normal; }
+
+.h0 {
+  font-size: 3rem; }
 
 h1 {
   font-size: 2.25rem; }
@@ -400,7 +428,7 @@ h2 {
 
 .Hr {
   background-color: transparent;
-  border-color: black; }
+  border-color: #383935; }
 
 /**
  * Media queries
@@ -441,9 +469,9 @@ h2 {
   */
   * {
     background: transparent !important;
-    border-color: black !important;
+    border-color: #383935 !important;
     box-shadow: none !important;
-    color: black !important;
+    color: #383935 !important;
     /* Black prints faster: h5bp.com/s */
     text-shadow: none !important; }
 
@@ -521,7 +549,7 @@ h2 {
   * SVGs and Icons
   */
   svg path {
-    fill: black !important; } }
+    fill: #383935 !important; } }
 @media print and (max-width: 40em) {
   .u-print.u-hidden, .u-print.u-sm-hidden {
     display: block !important; } }
@@ -565,7 +593,7 @@ h2 {
  */
 .u-accessibility {
   background-color: white !important;
-  color: black !important;
+  color: #383935 !important;
   left: -999rem !important;
   position: absolute !important; }
 
@@ -692,7 +720,7 @@ h2 {
 
 /**
  * External site SVGs are white by default
- * — must include class to make them see-able in body text
+ * - must include class to make them see-able in body text
  */
 .u-colorLink path {
   fill: #c3cf20; }
@@ -1021,7 +1049,7 @@ h2 {
   .Button-sm--full {
     width: 100%; } }
 .Button--secondary {
-  background-color: black; }
+  background-color: #383935; }
 
 /*------------------------------------*\
   $FLAG
@@ -1078,12 +1106,12 @@ h2 {
  */
 /**
  * Greybox
- * – used in the login flows as a container with grey background
+ * -used in the login flows as a container with grey background
  */
 @media (min-width: 40.0625em) {
   .Greybox {
     background-color: #f8f8f8;
-    border: 2px solid black;
+    border: 2px solid #383935;
     border-radius: 7.5px;
     margin-left: -24px;
     margin-right: -24px;
@@ -1094,7 +1122,7 @@ h2 {
   margin-top: 24px; }
 
 .Greybox-footerList-item {
-  border-top: 1px solid black; }
+  border-top: 1px solid #383935; }
   .Greybox-footerList-item:first-child {
     border-top: 0; }
 
@@ -1202,7 +1230,7 @@ h2 {
   z-index: 20; }
 
 .Header-container {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(56, 57, 53, 0.2);
   min-height: 68px;
   padding-bottom: 12px;
   padding-top: 12px;
@@ -1226,7 +1254,7 @@ h2 {
     .Header-clientInfo {
       position: relative; }
       .Header-clientInfo::before {
-        background-color: black;
+        background-color: #383935;
         content: "";
         height: 48px;
         left: -12px;
@@ -1246,7 +1274,7 @@ h2 {
  * Icons
  */
 .Icon {
-  background-color: black;
+  background-color: #383935;
   border-radius: 100%;
   color: white;
   display: inline-block;
@@ -1288,7 +1316,7 @@ h2 {
 .Icon--card,
 .Icon--job-seeker,
 .Icon--job-seeker-student {
-  background-color: black; }
+  background-color: #383935; }
 
 .Icon--teal,
 .Icon--youth-payment,
@@ -1299,7 +1327,7 @@ h2 {
 .Icon--widows-benefit,
 .Icon--orphans-benefit,
 .Icon--supplementary-assistance {
-  background-color: black; }
+  background-color: #383935; }
 
 .Icon--salmon,
 .Icon--calendar,
@@ -1307,16 +1335,16 @@ h2 {
 .Icon--sole-parent-overseas,
 .Icon--system-error,
 .Icon--unsupported-child {
-  background-color: black; }
+  background-color: #383935; }
 
 .Icon--blue,
 .Icon--young-parent {
-  background-color: black; }
+  background-color: #383935; }
 
 .Icon--purple,
 .Icon--veteran-pension,
 .Icon--super {
-  background-color: black; }
+  background-color: #383935; }
 
 /**
  * Input object
@@ -1326,8 +1354,8 @@ h2 {
 [type="number"],
 [type="tel"] {
   -webkit-appearance: none;
-  background-color: black;
-  border-color: black;
+  background-color: #383935;
+  border-color: #383935;
   border-radius: 5px;
   border-style: solid;
   border-width: 2px;
@@ -1467,16 +1495,16 @@ h2 {
  * Sidenav
  */
 .Sidenav {
-  border: 1px solid black;
+  border: 1px solid #383935;
   margin-top: 0; }
 
 .Sidenav-item {
-  border-bottom: 1px solid black; }
+  border-bottom: 1px solid #383935; }
   .Sidenav-item:last-child {
     border-bottom: 0; }
 
 .Sidenav-title {
-  border-bottom: 3px solid black; }
+  border-bottom: 3px solid #383935; }
 
 .Sidenav-link {
   display: block;
@@ -1484,16 +1512,16 @@ h2 {
   .Sidenav-link.Sidenav-link {
     color: white; }
   .Sidenav-link.active {
-    background-color: black; }
+    background-color: #383935; }
 
 .Sidenav-item-icon {
   opacity: .3; }
 
 .Sidenav--sansTitle {
-  border-top: 3px solid black; }
+  border-top: 3px solid #383935; }
 
 .Sidenav--magic {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #383935;
   margin: 36px -24px -49px;
   text-align: left; }
   @media (max-width: 40em) {
@@ -1502,13 +1530,13 @@ h2 {
       margin-right: -12px; } }
 
 .Sidenav--magic-item {
-  border-top: 1px solid black; }
+  border-top: 1px solid #383935; }
 
 .Sidenav--magic-link {
   display: block;
   padding: 24px 24px; }
   .Sidenav--magic-link:focus, .Sidenav--magic-link:hover {
-    background-color: black; }
+    background-color: #383935; }
   .Sidenav--magic-link.Sidenav--magic-link {
     color: white; }
 
@@ -1544,17 +1572,17 @@ h2 {
  * Full page background image
  */
 html {
+  font-size: 1.0625rem;
+  line-height: 1.82353;
   background-color: white;
   color: white;
-  background-image: url("images/bg.jpg");
+  background-image: url("images/-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
   background-size: cover; }
 
 .IntroContent {
-  background-color: rgba(0, 0, 0, 0.7);
-  height: 100vh;
   padding: 24px 48px; }
 
 .ScrollingContent {

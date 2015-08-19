@@ -16,7 +16,7 @@
 }
 
 html {
-  @extend %sans-serif;
+  @extend %museo-slab-300;
   background-color: $white;
   box-sizing: border-box; // 1
   color: $base-colour;
