@@ -10,17 +10,18 @@
  */
 
 // padding left
-.u-pL--sm { padding-left: $v/2 !important; }
+// .u-pL--sm { padding-left: $v/2 !important; }
 
 // padding right
 // .u-pR--0 { padding-right: 0 !important; }
-.u-pR--sm { padding-right: $v/2 !important; }
-.u-pR--md { padding-right: $v !important; }
+// .u-pR--sm { padding-right: $v/2 !important; }
+// .u-pR--md { padding-right: $v !important; }
 
 // padding bottom
-.u-pB--sm { padding-bottom: $v/2 !important; }
+// .u-pB--sm { padding-bottom: $v/2 !important; }
 // .u-pB--md { padding-bottom: $v !important; }
-.u-pB--lg { padding-bottom: $v*1.5 !important; }
+// .u-pB--lg { padding-bottom: $v*1.5 !important; }
+.u-pB--xx { padding-bottom: $v*4 !important; }
 
 /**
  * NOTE: comment the following lines back in as required
@@ -33,7 +34,7 @@
   // .u-#{$namespace}pL--md { padding-left: $v !important; }
   // .u-#{$namespace}pL--lg { padding-left: $v*1.5 !important; }
   // .u-#{$namespace}pL--xl { padding-left: $v*2 !important; }
-  .u-#{$namespace}pL--xx { padding-left: $v*4 !important; }
+  // .u-#{$namespace}pL--xx { padding-left: $v*4 !important; }
 
   // * padding right
   // .u-#{$namespace}pR--0 { padding-right: 0 !important; }
@@ -42,7 +43,7 @@
   // .u-#{$namespace}pR--md { padding-right: $v !important; }
   // .u-#{$namespace}pR--lg { padding-right: $v*1.5 !important; }
   // .u-#{$namespace}pR--xl { padding-right: $v*2 !important; }
-  .u-#{$namespace}pR--xx { padding-right: $v*4 !important; }
+  // .u-#{$namespace}pR--xx { padding-right: $v*4 !important; }
 }
 
 @include padding();

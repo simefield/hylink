@@ -63,7 +63,10 @@ html {
 
 .IntroContent-lead {
   @include font-size(32px, 40px);
-  text-shadow: 0 0 4px $black;
+
+  @media #{$tablet-up} {
+    text-shadow: 0 0 4px $black;
+  }
 }
 
 .Dl {
@@ -78,12 +81,14 @@ html {
 .Dl-dd {
   border-top: 1px solid rgba($white, 0.25);
   width: 50%;
-  padding: $v/3 $h/3;
+  padding-bottom: $v/3;
+  padding-top: $v/3;
 }
 
 
 .Dl-dt {
   @extend %museo-slab-500;
+  padding-right: $h;
 }
 
 .note {
@@ -98,6 +103,27 @@ html {
     position: absolute;
     left: 0;
     top: 0.667rem;
+  }
+}
+
+footer {
+  background-image: url('/images/footer.svg');
+  background-position: 50% 0;
+  background-repeat: repeat-x;
+  background-color: $dark-green;
+  background-size: auto;
+  color: $white;
+  padding-bottom: $v*2.5;
+  padding-top: $v*3.5;
+  width: 100%;
+
+  p {
+    @include font-size(14px);
+  }
+
+  a {
+    color: $white;
+    border-bottom: 1px solid rgba($white, .5);
   }
 }
 

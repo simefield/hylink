@@ -4,13 +4,13 @@
   padding-top: $v*2;
 }
 
-.Section:nth-child(odd) {
+.Section:nth-child(even) {
   background-color: $greybox;
   border-bottom: 1px solid #f0f0f0;
   border-top: 1px solid #f0f0f0;
 }
 
 .Section--blue {
-  background-color: $blue;
+  background-color: $blue !important;
   color: $white;
 }
