@@ -12,11 +12,11 @@
 html {
   @include font-size(17px, 31px);
   background-color: $white;
-  color: $white;
+  color: $black;
 
   // @media #{$tablet-up} {
     // https://css-tricks.com/perfect-full-page-background-image/
-    background-image: url("images/-bg.jpg"); // won't be loaded by most mobile browsers
+    background-image: url("images/somes-island.jpg"); // won't be loaded by most mobile browsers
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -24,10 +24,43 @@ html {
   // }
 }
 
+body {
+
+}
+
+// main
+.u-containContent {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 48 * 1rem;
+  padding-left: $h;
+  padding-right: $h;
+
+  @media #{$tablet-up} {
+    padding-left: $h*2;
+    padding-right: $h*2;
+  }
+}
+
+@media #{$tablet-up} {
+  .u-containContent--skinny {
+    padding-left: $h*6;
+    padding-right: $h*6;
+  }
+}
+
 .IntroContent {
-  // background-color: rgba($blue, 1);
-  // height: 100vh;
-  padding: $v $h*2;
+  padding-bottom: $h*3;
+  padding-top: $h*3;
+
+  @media #{$tablet-up} {
+    padding-bottom: $h*5;
+    padding-top: $h*5;
+  }
+
+  .lead {
+    text-shadow: 0 0 3px $black;
+  }
 }
 
 .ScrollingContent {

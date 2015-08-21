@@ -4,8 +4,10 @@ $button-border-color: currentcolor; // uses color value
 // $button-border-width: 1px;
 $button-border-radius: 40px;
 $button-color: inherit;
-$button-color: $white;
+$button-color: $black;
 $button-background-color: $green;
+$button-color: $white;
+$button-background-color: $blue;
 $button-disabled-opacity: .6;
 $button-font: inherit;
 // $button-padding: .4em .75em;
@@ -30,64 +32,35 @@ $button-font: inherit;
 
 .Button {
   -webkit-appearance: none; /* 1 */
-  // background: transparent;
   background-color: $button-background-color;
-  // border-color: $button-border-color;
-  // border-style: solid;
-  // border-width: $button-border-width;
   border-radius: $button-border-radius;
   box-sizing: border-box; /* 2 */
-  color: $button-color; /* 3 */
+  color: $button-color;
   cursor: pointer;
   display: inline-block;
-  // font: $button-font; /* 4 */
-  // line-height: normal; /* 5 */
   line-height: (40/16) * 1rem; /* 5 */
   margin: 0;
-  // padding: $button-padding;
-  // padding-left: $h*1.5;
-  // padding-right: $h*1.5;
-  // wider! more space for svg loading spinner
   padding-left: $h*1.5;
   padding-right: $h*1.5;
   position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none; /* 6 */
-  // white-space: normal; /* 7 */
   white-space: nowrap; /* 7.1 */
-
-  // text-rendering: optimizeLegibility;
-  // -webkit-font-smoothing: antialiased;
-
-  /* TEMPORARY */
-  // &.active {
-  //   // @extend strong;
-  //   background-color: $black-5;
-  //   color: $black;
-  // }
+  @extend .museo-slab-500;
 }
-
-/**
- * Remove excess padding and border in Firefox 4+
- */
-
-// .Button::-moz-focus-inner {
-//   border: 0;
-//   padding: 0;
-// }
 
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */
 
-// .Button:focus {
-//   // scss-lint:disable DuplicateProperty
-//   outline: 1px dotted;
-//   outline: 5px auto -webkit-focus-ring-color;
-//   // scss-lint:enable DuplicateProperty
-// }
+.Button:focus {
+  // scss-lint:disable DuplicateProperty
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  // scss-lint:enable DuplicateProperty
+}
 
 /**
  * UI states
@@ -145,5 +118,6 @@ $button-font: inherit;
 // }
 
 .Button--secondary {
-  background-color: $black;
+  color: $black !important;
+  background-color: $green;
 }
