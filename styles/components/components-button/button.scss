@@ -31,6 +31,8 @@ $button-font: inherit;
  */
 
 .Button {
+  @extend .museo-slab-500;
+  @include font-size(18px);
   -webkit-appearance: none; /* 1 */
   background-color: $button-background-color;
   border-radius: $button-border-radius;
@@ -40,14 +42,13 @@ $button-font: inherit;
   display: inline-block;
   line-height: (40/16) * 1rem; /* 5 */
   margin: 0;
-  padding-left: $h*1.5;
-  padding-right: $h*1.5;
+  padding-left: $h*2;
+  padding-right: $h*2;
   position: relative;
   text-align: center;
   text-decoration: none;
   user-select: none; /* 6 */
   white-space: nowrap; /* 7.1 */
-  @extend .museo-slab-500;
 }
 
 /**

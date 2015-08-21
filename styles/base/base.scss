@@ -23,21 +23,18 @@ html {
   line-height: $base-line-height;
 }
 
-b,
-strong {
-  font-weight: 900;
-}
 
 i,
 em {
   font-style: italic;
 }
 
+b,
+strong,
 h1,
 h2,
 h3 {
   @extend %museo-slab-500;
-  color: $green;
 }
 
 a:focus,

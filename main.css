@@ -300,28 +300,19 @@ html {
   color: white;
   line-height: 1.5; }
 
-b,
-strong {
-  font-weight: 900; }
-
 i,
 em {
   font-style: italic; }
-
-h1,
-h2,
-h3 {
-  color: #c3cf20; }
 
 a:focus,
 a:visited,
 a:hover,
 a:active {
-  color: #c3cf20;
+  color: #c1cd23;
   text-decoration: none; }
 
 a {
-  color: #c3cf20;
+  color: #c1cd23;
   cursor: pointer;
   text-decoration: none; }
 
@@ -400,7 +391,9 @@ hr {
 @font-face {
   font-family: "museo-slab-300";
   src: url("fonts/museo_slab_300-webfont.woff2") format("woff2"), url("fonts/museo_slab_300-webfont.woff") format("woff"); }
-.museo-slab-500, h1,
+.museo-slab-500, b,
+strong,
+h1,
 h2,
 h3, .Button {
   font-family: "museo-slab-500", sans-serif;
@@ -413,20 +406,26 @@ h3, .Button {
   font-weight: normal; }
 
 .h0 {
-  font-size: 3rem; }
+  font-size: 3rem;
+  line-height: 1.25;
+  color: #c1cd23; }
 
 h1 {
-  font-size: 2.25rem; }
+  font-size: 2.25rem;
+  line-height: 1.33333; }
 
 h2 {
-  font-size: 1.5rem; }
+  font-size: 2.25rem;
+  line-height: 1.16667; }
 
 .lead {
-  font-size: 1.5rem; }
+  font-size: 1.5rem;
+  line-height: 1.5;
+  color: #70a037; }
 
-.u-containContent > h1,
-.u-containContent > h2,
-.u-containContent > .lead {
+.u-containContent > h1:first-child,
+.u-containContent > h2:first-child,
+.u-containContent > .lead:first-child {
   margin-top: 0; }
 
 .Hr {
@@ -726,7 +725,7 @@ h2 {
  * - must include class to make them see-able in body text
  */
 .u-colorLink path {
-  fill: #c3cf20; }
+  fill: #c1cd23; }
 
 /**
  * Link complex
@@ -761,6 +760,9 @@ h2 {
 
 .u-mT--xl {
   margin-top: 48px !important; }
+
+.u-mT--xx {
+  margin-top: 72px !important; }
 
 /**
  * NOTE: each line here adds 9 lines of code to css, so onyl create new classes if absolutely necessary
@@ -948,6 +950,12 @@ h2 {
 .u-textColourWhite {
   color: white; }
 
+.u-textColourGreen {
+  color: #c1cd23; }
+
+.u-textColourBlack {
+  color: #383935; }
+
 /**
  * Text weight
  */
@@ -969,6 +977,7 @@ h2 {
  * 7.1 No, don't
  */
 .Button {
+  font-size: 1.125rem;
   -webkit-appearance: none;
   /* 1 */
   background-color: #3c71b9;
@@ -981,8 +990,8 @@ h2 {
   line-height: 2.5rem;
   /* 5 */
   margin: 0;
-  padding-left: 36px;
-  padding-right: 36px;
+  padding-left: 48px;
+  padding-right: 48px;
   position: relative;
   text-align: center;
   text-decoration: none;
@@ -1025,7 +1034,7 @@ h2 {
     width: 100%; } }
 .Button--secondary {
   color: #383935 !important;
-  background-color: #c3cf20; }
+  background-color: #c1cd23; }
 
 /*------------------------------------*\
   $FLAG
@@ -1472,11 +1481,10 @@ h2 {
   padding-bottom: 48px;
   padding-top: 48px; }
 
-.Section--odd {
-  background-color: #f8f8f8; }
-
-.Section--even {
-  background-color: white; }
+.Section:nth-child(odd) {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #f0f0f0;
+  border-top: 1px solid #f0f0f0; }
 
 /**
  * Table fixed / fluid combined layout
@@ -1507,8 +1515,8 @@ h2 {
  * Full page background image
  */
 html {
-  font-size: 1.0625rem;
-  line-height: 1.82353;
+  font-size: 1rem;
+  line-height: 1.75;
   background-color: white;
   color: #383935;
   background-image: url("images/somes-island.jpg");
@@ -1520,7 +1528,7 @@ html {
 .u-containContent {
   margin-left: auto;
   margin-right: auto;
-  max-width: 48rem;
+  max-width: 50rem;
   padding-left: 24px;
   padding-right: 24px; }
   @media (min-width: 40.0625em) {
@@ -1537,10 +1545,13 @@ html {
   padding-top: 72px; }
   @media (min-width: 40.0625em) {
     .IntroContent {
-      padding-bottom: 120px;
+      padding-bottom: 96px;
       padding-top: 120px; } }
-  .IntroContent .lead {
-    text-shadow: 0 0 3px #383935; }
+
+.IntroContent-lead {
+  font-size: 2rem;
+  line-height: 1.25;
+  text-shadow: 0 0 4px #383935; }
 
 .ScrollingContent {
   padding: 24px 48px; }

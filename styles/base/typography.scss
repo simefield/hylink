@@ -66,25 +66,27 @@ $museo-slab-300: "museo-slab-300", Avenir, "HelveticaNeue-Light", "HelveticaNeue
 // see base.scss for element's typography
 
 .h0 {
-  @include font-size(48px);
+  @include font-size(48px, 60px);
+  color: $green;
 }
 
 h1 {
-  @include font-size(36px);
+  @include font-size(36px, 48px);
 }
 
 h2 {
-  @include font-size(24px);
+  @include font-size(36px, 42px);
 }
 
 .lead {
-  @include font-size(24px);
+  @include font-size(24px, 36px);
+  color: $dark-green;
 }
 
 .u-containContent {
-  > h1,
-  > h2,
-  > .lead {
+  > h1:first-child,
+  > h2:first-child,
+  > .lead:first-child {
     margin-top: 0;
   }
 }
