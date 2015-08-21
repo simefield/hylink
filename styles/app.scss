@@ -11,22 +11,24 @@
 
 html {
   @include font-size(16px, 28px);
-  background-color: $white;
+  background-color: $blue;
   color: $black;
 
-  // @media #{$tablet-up} {
+  @media #{$tablet-up} {
+  background-color: $white;
+    
     // https://css-tricks.com/perfect-full-page-background-image/
     background-image: url("images/somes-island.jpg"); // won't be loaded by most mobile browsers
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
-  // }
+  }
 }
 
-body {
+// body {
 
-}
+// }
 
 // main
 .u-containContent {
@@ -64,61 +66,98 @@ body {
   text-shadow: 0 0 4px $black;
 }
 
-.ScrollingContent {
-  padding: $v $h*2;
+.Dl {
+  @include font-size(16px, 18px);
+  border-bottom: 1px solid rgba($white, 0.5);
+  margin-top: $v;
+  width: 100%;
+  border-collapse: collapse;
 }
+
+.Dl-dt,
+.Dl-dd {
+  border-top: 1px solid rgba($white, 0.25);
+  width: 50%;
+  padding: $v/3 $h/3;
+}
+
+
+.Dl-dt {
+  @extend %museo-slab-500;
+}
+
+.note {
+  @include font-size(14px);
+  margin-top: 0;
+  position: relative;
+  padding-left: 1rem;
+
+  sup {
+  // @include font-size(8px);
+
+    position: absolute;
+    left: 0;
+    top: 0.667rem;
+  }
+}
+
+// .ScrollingContent {
+//   padding: $v $h*2;
+// }
 
 /**
  * Main content container
  * - includes top padding allowance for header
  */
 
-.MainContent {
-  @extend %u-contain-content;
+// .MainContent {
+//   @extend %u-contain-content;
 
-  // let's squeeze it up a bit more for mobile users
-  @media #{$mobile-only} {
-    margin-top: -($v/2);
-  }
-  // negative margin-bottoms go on elements requiring flush sitting with .Footer, e.g. .MagicList, .ContactDetails
-  padding-bottom: $page-bottom-padding;
-}
+//   // let's squeeze it up a bit more for mobile users
+//   @media #{$mobile-only} {
+//     margin-top: -($v/2);
+//   }
+//   // negative margin-bottoms go on elements requiring flush sitting with .Footer, e.g. .MagicList, .ContactDetails
+//   padding-bottom: $page-bottom-padding;
+// }
 
 
 /**
  * Sidebar
  */
 
-.Sidebar {
-  padding-right: $h; // this manifests as the margin between the side nav and the main content
-  width: $sidebar-width;
-}
+// .Sidebar {
+//   padding-right: $h; // this manifests as the margin between the side nav and the main content
+//   width: $sidebar-width;
+// }
 
-.Sidebar--narrow {
-  width: $sidebar-width-narrow;
-}
+// .Sidebar--narrow {
+//   width: $sidebar-width-narrow;
+// }
 
 /**
  * Centered middle column for login process
  */
 
-.MiddleColumn {
-  max-width: $h*16;
-  text-align: center;
+// .MiddleColumn {
+//   max-width: $h*16;
+//   text-align: center;
 
-  @media #{$tablet-up} {
-    max-width: $middle-column-width;
-    // bleed these back out in .Greybox
-    padding-left: $h;
-    padding-right: $h;
-    // behave nicely with the .Motif frangipani
-    background-color: $white;
-    border-radius: $border-radius*1.5;
-    position: relative;
-    z-index: $z-nudge;
-  }
+//   @media #{$tablet-up} {
+//     max-width: $middle-column-width;
+//     // bleed these back out in .Greybox
+//     padding-left: $h;
+//     padding-right: $h;
+//     // behave nicely with the .Motif frangipani
+//     background-color: $white;
+//     border-radius: $border-radius*1.5;
+//     position: relative;
+//     z-index: $z-nudge;
+//   }
 
-  > :first-child {
-    margin-top: 0;
-  }
-}
+//   > :first-child {
+//     margin-top: 0;
+//   }
+// }
+
+

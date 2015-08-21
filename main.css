@@ -395,7 +395,7 @@ hr {
 strong,
 h1,
 h2,
-h3, .Button {
+h3, .Dl-dt, .Button {
   font-family: "museo-slab-500", sans-serif;
   font-style: normal;
   font-weight: normal; }
@@ -526,7 +526,7 @@ h2 {
     padding-bottom: 0 !important;
     padding-top: 0 !important; }
 
-  .u-contain-content, .MainContent,
+  .u-contain-content,
   .MiddleColumn {
     max-width: none !important; }
 
@@ -560,7 +560,7 @@ h2 {
  * Center main content areas
  * used to re-center after parent element stretches full width, e.g. footer
  */
-.u-contain-content, .MainContent {
+.u-contain-content {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -568,7 +568,7 @@ h2 {
   padding-left: 12px;
   padding-right: 12px; }
   @media (min-width: 40.0625em) {
-    .u-contain-content, .MainContent {
+    .u-contain-content {
       padding-left: 24px;
       padding-right: 24px; } }
 
@@ -1486,6 +1486,10 @@ h2 {
   border-bottom: 1px solid #f0f0f0;
   border-top: 1px solid #f0f0f0; }
 
+.Section--blue {
+  background-color: #3c71b9;
+  color: white; }
+
 /**
  * Table fixed / fluid combined layout
  * http://colintoh.com/blog/display-table-anti-hero
@@ -1517,13 +1521,16 @@ h2 {
 html {
   font-size: 1rem;
   line-height: 1.75;
-  background-color: white;
-  color: #383935;
-  background-image: url("images/somes-island.jpg");
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  background-size: cover; }
+  background-color: #3c71b9;
+  color: #383935; }
+  @media (min-width: 40.0625em) {
+    html {
+      background-color: white;
+      background-image: url("images/somes-island.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover; } }
 
 .u-containContent {
   margin-left: auto;
@@ -1553,43 +1560,37 @@ html {
   line-height: 1.25;
   text-shadow: 0 0 4px #383935; }
 
-.ScrollingContent {
-  padding: 24px 48px; }
+.Dl {
+  font-size: 1rem;
+  line-height: 1.125;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  margin-top: 24px;
+  width: 100%;
+  border-collapse: collapse; }
+
+.Dl-dt,
+.Dl-dd {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  width: 50%;
+  padding: 8px 8px; }
+
+.note {
+  font-size: 0.875rem;
+  margin-top: 0;
+  position: relative;
+  padding-left: 1rem; }
+  .note sup {
+    position: absolute;
+    left: 0;
+    top: 0.667rem; }
 
 /**
  * Main content container
  * - includes top padding allowance for header
  */
-.MainContent {
-  padding-bottom: 48px; }
-  @media (max-width: 40em) {
-    .MainContent {
-      margin-top: -12px; } }
-
 /**
  * Sidebar
  */
-.Sidebar {
-  padding-right: 24px;
-  width: 292.0px; }
-
-.Sidebar--narrow {
-  width: 232.00001px; }
-
 /**
  * Centered middle column for login process
  */
-.MiddleColumn {
-  max-width: 384px;
-  text-align: center; }
-  @media (min-width: 40.0625em) {
-    .MiddleColumn {
-      max-width: 28.75em;
-      padding-left: 24px;
-      padding-right: 24px;
-      background-color: white;
-      border-radius: 7.5px;
-      position: relative;
-      z-index: 1; } }
-  .MiddleColumn > :first-child {
-    margin-top: 0; }
