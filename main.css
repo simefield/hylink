@@ -1501,7 +1501,7 @@ h3 {
   padding-bottom: 48px;
   padding-top: 48px; }
 
-.Section:nth-child(even) {
+.Section:nth-child(odd) {
   background-color: #f8f8f8;
   border-bottom: 1px solid #f0f0f0;
   border-top: 1px solid #f0f0f0; }
