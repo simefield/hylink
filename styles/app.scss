@@ -11,24 +11,21 @@
 
 html {
   @include font-size(16px, 28px);
-  background-color: $blue;
   color: $black;
+  // background-color: $blue;
+  background-image: url("images/somes-island.jpg"); // won't be loaded by most mobile browsers
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center 0;
+  // background-size: 100vh auto;
+  // background-size: 200vw;
+  background-size: auto 200vh;
 
   @media #{$tablet-up} {
-  background-color: $white;
-    
-    // https://css-tricks.com/perfect-full-page-background-image/
-    background-image: url("images/somes-island.jpg"); // won't be loaded by most mobile browsers
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: center center;
     background-size: cover;
   }
 }
-
-// body {
-
-// }
 
 // main
 .u-containContent {
@@ -63,23 +60,20 @@ html {
 
 .IntroContent-lead {
   @include font-size(32px, 40px);
-
-  @media #{$tablet-up} {
-    text-shadow: 0 0 4px $black;
-  }
+  text-shadow: 0 0 4px $black;
 }
 
 .Dl {
   @include font-size(16px, 18px);
-  border-bottom: 1px solid rgba($white, 0.5);
+  border-bottom: 1px solid rgba($white, 0.4);
   margin-top: $v;
   width: 100%;
-  border-collapse: collapse;
+  // border-collapse: collapse;
 }
 
 .Dl-dt,
 .Dl-dd {
-  border-top: 1px solid rgba($white, 0.25);
+  border-top: 1px solid rgba($white, 0.4);
   width: 50%;
   padding-bottom: $v/3;
   padding-top: $v/3;
@@ -125,6 +119,12 @@ footer {
     color: $white;
     border-bottom: 1px solid rgba($white, .5);
   }
+}
+
+.credit {
+  @include font-size(12px);
+  color: $black;
+  margin-top: $v*2;
 }
 
 // .ScrollingContent {

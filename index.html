@@ -11,7 +11,7 @@
     <link rel="icon" type="image/png" href="images/app-icons/android-chrome-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" sizes="60x60" href="images/app-icons/AppIcon60x60.png">
     <link rel="apple-touch-icon" sizes="120x120" href="images/app-icons/AppIcon60x60@2x.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="images/app-icons/AppIcon72x72.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/app-icons/AppIcon72x72.png">
     <link rel="apple-touch-icon" sizes="144x144" href="images/app-icons/AppIcon72x72@2x.png">
     <link rel="apple-touch-icon" sizes="76x76" href="images/app-icons/AppIcon76x76.png">
     <link rel="apple-touch-icon" sizes="152x152" href="images/app-icons/AppIcon76x76@2x.png">
@@ -21,14 +21,14 @@
     <section class="IntroContent u-textCenter">
       <div class="u-containContent u-containContent--skinny">
         <h1 class="h0 u-mT--0">HyLink<sup>™</sup> <span class="u-textNoWrap">Systems Ltd</span></h1>
-        <p class="IntroContent-lead lead u-textColourWhite u-mT--lg">The world’s first remote hydrogen energy generation and storage system</p>
+        <p class="IntroContent-lead lead u-textColourWhite u-mT--lg">An integrated hydrogen generation and energy storage system</p>
         <a href="mailto:malcolms@esgasiapacific.com?subject=HyLink enquiry" class="Button Button--secondary u-mT--xx">Let’s talk</a>
       </div>
     </section>
     <section class="Section">
       <div class="u-containContent">
         <h2>What is HyLink<sup>™</sup></h2>
-        <p class="lead">HyLink<sup>™</sup> is a <span class="u-textNowrap">New Zealand</span> innovation to improve the efficiency and flexibility of renewable energy systems.</p>
+        <p class="lead">HyLink<sup>™</sup> is a <span class="u-textNoWrap">New Zealand</span> innovation to improve the efficiency and flexibility of renewable energy systems.</p>
         <p>HyLink<sup>™</sup> combines a rugged electrolyser, which splits water into hydrogen and oxygen using electricity, with a low pressure hydrogen storage system.</p>
         <p>HyLink<sup>™</sup> provides a method to store energy when it is available (e.g. when the sun shines on PV panels) in the form of a clean fuel gas, hydrogen.</p>
         <p>Hydrogen burns to produce heat and pure steam. A range of hydrogen fuelled appliances are being developed, including instant hot water heaters, barbecues and cooking hobs.</p>
@@ -46,7 +46,22 @@
     <section class="Section Section--blue">
       <div class="u-containContent">
         <h2>HyLink<sup>™</sup> Hydrogen Energy System</h2>
-        <img class="responsive u-mT--xx" src="images/hylink-diagram.png" alt="HyLink™ system diagram">
+        <!-- desktop (horizontal layout) -->
+        <div class="Diagram Diagram--horizontal u-distribute u-distribute--middle u-mT--lg">
+          <img src="images/hylink-diagram-generation.svg" alt="Renewable energy generation">
+          <img class="Diagram-arrow" src="images/arrow-horizontal.svg" role="presentation" alt="">
+          <img src="images/hylink-diagram-hylink-system.svg" alt="HyLink™ electrolyser and hydrogen storage">
+          <img class="Diagram-arrow" src="images/arrow-horizontal.svg" role="presentation" alt="">
+          <img src="images/hylink-diagram-energy.svg" alt="HyLink™ electrolyser and hydrogen storage">
+        </div>
+        <!-- mobile devices (vertical layout) -->
+        <div class="Diagram Diagram--vertical u-mT--lg">
+          <img src="images/hylink-diagram-generation.svg" alt="Renewable energy generation">
+          <img class="Diagram-arrow" src="images/arrow-vertical.svg" role="presentation" alt="">
+          <img src="images/hylink-diagram-hylink-system.svg" alt="HyLink™ electrolyser and hydrogen storage">
+          <img class="Diagram-arrow" src="images/arrow-vertical.svg" role="presentation" alt="">
+          <img src="images/hylink-diagram-energy.svg" alt="HyLink™ electrolyser and hydrogen storage">
+        </div>
         <h3 class="u-mT--xl">Performance</h3>
         <table class="Dl">
           <tr>
@@ -79,44 +94,38 @@
       <div class="u-containContent">
         <h2>Renewable Energy Systems</h2>
         <p class="lead">Renewable energy is better than fossil fuels, especially on islands where the fuel needs to be transported from the mainland.</p>
-        <p>Where energy is needed, everybody should be trying to make use of the local sustainable resources. Wind and solar energy are readily available on this island and throughout <span class="u-textNowrap">New Zealand</span>, as well as many other remote locations around the world.</p>
+        <p>Where energy is needed, everybody should be trying to make use of the local sustainable resources. Wind and solar energy are readily available <span class="u-hidden"> on this island and</span> throughout <span class="u-textNoWrap">New Zealand</span>, as well as many other remote locations around the world.</p>
         <h3>Energy Storage</h3>
         <p>The problem with intermittent energy resources such as wind and solar is how to store their energy efficiently until it is needed. Hydrogen gas made from water is a simple way of storing some of this energy, particularly if the end use is heating and cooking. A device to split water into hydrogen and oxygen using electricity is called an electrolyser. This technology is designed to cost effectively produce and use hydrogen effciently.</p>
         <h3>About Hydrogen</h3>
         <p>Hydrogen is a very light, colourless, odourless gas. It rises and disperses rapidly in air. It burns intensely even in small concentrations and produces a very hot, colourless flame without any carbon dioxide emissions. Fuel cell vehicles use tanks at a pressure of up to 700 atmospheres, and it must be compressed to high pressure for this application. However, for stationary storage, researchers have developed the low pressure system using standard cost effective polymer fuel pipes. The hydrogen is produced directly at the storage pressure, so that no compression is required.</p>
       </div>
     </section>
-<!--     <section class="Section">
-      <div class="u-containContent">
-        <h2>Matiu/Somes Island pilot system</h2>
-        <h3>The Hydrogen Energy Equipment</h3>
-        <p>This is a pilot site set up to evaluate the performance of the <span class="u-textNowrap">New Zealand</span> developed hydrogen system called HyLink<sup>™</sup>. Here on Matiu/Somes Island hydrogen is made from water using surplus wind and solar electricity.</p>
-        <p>The hydrogen is stored in a plastic pipe under the ground at low pressure (up to four times atmospheric pressure), where it can be kept for months with negligible loss.</p>
-        <p>At present the hydrogen gas is being used to fuel a barbeque and provide instant hot water in the workshop. It is possible to extend the use of this clean fuel to substitute LPG on other parts of the island. It can also be used for regeneration of electricity via a fuel cell.</p>
-      </div>
-    </section> -->
     <section class="Section u-pB--xx">
       <div class="u-containContent">
         <h2>Who are we?</h2>
         <p class="lead">HyLink<sup>™</sup> Systems Ltd, are part of
-        the E. Sime Group Ltd, a fourth generation family business which commenced trading in <span class="u-textNowrap">New Zealand</span> in 1923.</p>
-        <p>With businesses in <span class="u-textNowrap">New Zealand</span>, Australia and Singapore, the company now trades as <a href="http://www.esgasiapacific.com">ESG Asia Pacific</a>.</p>
-        <p>HyLink<sup>™</sup> Systems Ltd had been working for over four years with the <span class="u-textNowrap">New Zealand</span> Government funded research and development company, <a href="https://www.callaghaninnovation.govt.nz">Callaghan Innovation</a>, whose research team have been working on this project for over 10 years.</p>
-        <!-- <p>E. Sime Group have a long history of innovation and bringing tomorrow's products to various markets, well before their time. They were the first to introduce to the <span class="u-textNowrap">New Zealand</span> market products such as car safety belts, mag wheels, air horns, quartz halogen bulbs and sports steering wheels. In recent years, they were the first to introduce a Green Washroom program in <span class="u-textNowrap">New Zealand</span>, Australia and Singapore, and today have the largest team of independent distributors servicing this market in Australasia.</p> -->
+        the E. Sime Group Ltd, a fourth generation family business which commenced trading in <span class="u-textNoWrap">New Zealand</span> <span class="u-textNoWrap">in 1923.</span></p>
+        <p>With businesses in <span class="u-textNoWrap">New Zealand</span>, Australia and Singapore, the company trades as <a href="http://www.esgasiapacific.com">ESG Asia Pacific</a>.</p>
+        <p>HyLink<sup>™</sup> Systems Ltd had been working for over four years with the <span class="u-textNoWrap">New Zealand</span> Government funded research and development company, <a href="https://www.callaghaninnovation.govt.nz">Callaghan Innovation</a>, whose research team have been working on this project for over 10 years.</p>
         <p>Today E. Sime Group Ltd has the worldwide manufacturing, marketing and sales rights to the HyLink™ System, and are happy to talk to anyone in regard to purchasing units, distribution, investment, or involvement in any way.</p>
       </div>
     </section>
     <footer class="u-textCenter">
       <div class="u-containContent">
         <h2>Contact</h2>
-        <p><strong>Malcolm Sime, Chairman</strong><br>
-        HyLink™ Systems Ltd, <span class="u-textNoWrap">61 Seaview Road</span><br>
-        PO Box 31332, Lower Hutt, 5040, <span class="u-textNoWrap">New Zealand</span><br>
-        <a href="mailto:malcolms@esgasiapacific.com?subject=HyLink enquiry">malcolms@esgasiapacific.com</a></p>
+        <p>
+          <span class="u-textNoWrap"><strong>Malcolm Sime, Chairman</strong></span><br>
+          <span class="u-textNoWrap"><strong>HyLink™ Systems Ltd</strong></span><br>
+          <span class="u-textNoWrap">61 Seaview Road,</span>
+          <span class="u-textNoWrap">PO Box 31332,</span>
+          <span class="u-textNoWrap">Lower Hutt, 5040,</span>
+          <span class="u-textNoWrap">New Zealand</span><br>
+          <a href="mailto:malcolms@esgasiapacific.com?subject=HyLink enquiry">malcolms@esgasiapacific.com</a>
+        </p>
+        <p class="credit">Photograph on Matiu/Somes Island courtesy of Callaghan Innovation</p>
       </div>
     </footer>
-    <!--script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script-->
-    <!--script src="js/main.js"></script-->
   </body>
 </html>
 

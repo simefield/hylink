@@ -105,53 +105,53 @@
    * Local / specific
    */
 
-  .Header {
-    margin-bottom: 24px;
-    margin-top: 8px;
-    position: relative !important;
-  }
+  // .Header {
+  //   margin-bottom: 24px;
+  //   margin-top: 8px;
+  //   position: relative !important;
+  // }
 
-  .Header-logo {
-    top: 7px !important;
-  }
+  // .Header-logo {
+  //   top: 7px !important;
+  // }
 
-  // .Header,
-  .Footer,
-  .Motif,
-  .Button {
-    @extend %u-print--none;
-  }
+  // // .Header,
+  // .Footer,
+  // .Motif,
+  // .Button {
+  //   @extend %u-print--none;
+  // }
 
-  .MainContent {
-    max-width: none !important;
-    padding-bottom: 0 !important;
-    padding-top: 0 !important;
-  }
+  // .MainContent {
+  //   max-width: none !important;
+  //   padding-bottom: 0 !important;
+  //   padding-top: 0 !important;
+  // }
 
-  .u-contain-content,
-  .MiddleColumn {
-    max-width: none !important;
-  }
+  // .u-contain-content,
+  // .MiddleColumn {
+  //   max-width: none !important;
+  // }
 
   /**
   * Printable modals
   */
 
-  .ember-modal-overlay {
-    background-color: $white !important;
-    width: 100% !important;
-  }
+  // .ember-modal-overlay {
+  //   background-color: $white !important;
+  //   width: 100% !important;
+  // }
 
-  .ember-modal-dialog {
-    height: 100%;
-    left: 0 !important;
-    margin-left: 0 !important;
-    margin-top: 0 !important;
-    max-height: none !important;
-    max-width: none !important;
-    position: relative !important;
-    top: 0 !important;
-  }
+  // .ember-modal-dialog {
+  //   height: 100%;
+  //   left: 0 !important;
+  //   margin-left: 0 !important;
+  //   margin-top: 0 !important;
+  //   max-height: none !important;
+  //   max-width: none !important;
+  //   position: relative !important;
+  //   top: 0 !important;
+  // }
 
   /**
   * SVGs and Icons
@@ -160,6 +160,12 @@
   svg path {
     fill: $black !important;
   }
-}
 
+  .Diagram {
+    img {
+      width: 20%;
+    }
+  }
+
+}
 // scss-lint:enable ImportantRule Indentation
